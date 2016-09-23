@@ -1,0 +1,16 @@
+/*------------------------------------------------------------------
+MIXINS SASS
+--------------------------------------------------------------------*/
+
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+@mixin box-sizing($parametre) {
+  -moz-box-sizing: $parametre;
+  -webkit-box-sizing: $parametre;
+  box-sizing: $parametre;
+}
