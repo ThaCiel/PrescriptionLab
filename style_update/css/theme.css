@@ -51,9 +51,8 @@ section {
 .imgFullWidth {
   width: 100%; }
 
-.italic {
-  font-style: italic;
-  font-weight: 100; }
+.didot-italic {
+  font-family: 'DidotItalic'; }
 
 @media only screen and (max-width: 767px) {
   #page_content_wrapper {
