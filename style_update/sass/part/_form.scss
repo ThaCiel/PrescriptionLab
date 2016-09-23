@@ -39,6 +39,7 @@
     text-transform: none;
     cursor: pointer;
 
+
     &:before {
       box-sizing: border-box;
       content: '';
@@ -93,57 +94,67 @@
   }
 }
 
-.input{
+.input {
   margin-top: 10px;
+}
 
-  input[type="text"], textarea, input[type="email"], input[type="url"], input[type="date"], input[type="password"]{
-    display: block;
-    outline: none;
+input[type="text"], textarea, input[type="email"], input[type="url"], input[type="date"], input[type="password"]{
+  display: block;
+  outline: none;
+  border: solid 1px $lightGrey;
+  padding: 10px;
+
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+
+  &:focus{
     border: solid 1px $lightGrey;
-    padding: 10px;
 
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    border-radius: 0px;
-
-    -webkit-transition: all 0.2s ease 0s;
-    -moz-transition: all 0.2s ease 0s;
-    -ms-transition: all 0.2s ease 0s;
-    transition: all 0.2s ease 0s;
-
-    &:focus{
-      border: solid 1px $lightGrey;
-
-      -webkit-box-shadow: 0px 0px 4px 1px $lightGrey;
-      -moz-box-shadow: 0px 0px 4px 1px $lightGrey;
-      -ms-box-shadow: 0px 0px 4px 1px $lightGrey;
-      box-shadow: 0px 0px 4px 1px $lightGrey;
-    }
+    -webkit-box-shadow: 0px 0px 4px 1px $lightGrey;
+    -moz-box-shadow: 0px 0px 4px 1px $lightGrey;
+    -ms-box-shadow: 0px 0px 4px 1px $lightGrey;
+    box-shadow: 0px 0px 4px 1px $lightGrey;
   }
 }
 
-.submit{
+.submit {
   margin-top: 15px;
+}
 
-  button[type="submit"]{
-    letter-spacing: 2px;
-    font-family: 'JosefinBold';
-    padding: 10px 20px;
-    background-color: $black;
-    color: $white;
-    border: solid 2px $black;
-    cursor: pointer;
-    text-transform: uppercase;
+button[type="submit"]{
+  letter-spacing: 2px;
+  font-family: 'JosefinBold';
+  padding: 10px 20px;
+  background-color: $black;
+  color: $white;
+  border: solid 2px $black;
+  cursor: pointer;
+  text-transform: uppercase;
 
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 
-    &:hover{
-      color: $black;
-      background-color: transparent;
-    }
+  &:hover{
+    color: $black;
+    background-color: transparent;
   }
+}
+
+label{
+  font-family: 'Josefin';
+  width: 100%;
+}
+
+input{
+  font-family: 'Josefin';
+  color: $black;
 }
