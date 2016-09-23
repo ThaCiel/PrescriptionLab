@@ -169,44 +169,54 @@ PART
 
 .input {
   margin-top: 10px; }
-  .input input[type="text"], .input textarea, .input input[type="email"], .input input[type="url"], .input input[type="date"], .input input[type="password"] {
-    display: block;
-    outline: none;
+
+input[type="text"], textarea, input[type="email"], input[type="url"], input[type="date"], input[type="password"] {
+  display: block;
+  outline: none;
+  border: solid 1px lightgrey;
+  padding: 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s; }
+  input[type="text"]:focus, textarea:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="password"]:focus {
     border: solid 1px lightgrey;
-    padding: 10px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    border-radius: 0px;
-    -webkit-transition: all 0.2s ease 0s;
-    -moz-transition: all 0.2s ease 0s;
-    -ms-transition: all 0.2s ease 0s;
-    transition: all 0.2s ease 0s; }
-    .input input[type="text"]:focus, .input textarea:focus, .input input[type="email"]:focus, .input input[type="url"]:focus, .input input[type="date"]:focus, .input input[type="password"]:focus {
-      border: solid 1px lightgrey;
-      -webkit-box-shadow: 0px 0px 4px 1px lightgrey;
-      -moz-box-shadow: 0px 0px 4px 1px lightgrey;
-      -ms-box-shadow: 0px 0px 4px 1px lightgrey;
-      box-shadow: 0px 0px 4px 1px lightgrey; }
+    -webkit-box-shadow: 0px 0px 4px 1px lightgrey;
+    -moz-box-shadow: 0px 0px 4px 1px lightgrey;
+    -ms-box-shadow: 0px 0px 4px 1px lightgrey;
+    box-shadow: 0px 0px 4px 1px lightgrey; }
 
 .submit {
   margin-top: 15px; }
-  .submit button[type="submit"] {
-    letter-spacing: 2px;
-    font-family: 'JosefinBold';
-    padding: 10px 20px;
-    background-color: #1c1d1d;
-    color: white;
-    border: solid 2px #1c1d1d;
-    cursor: pointer;
-    text-transform: uppercase;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    transition: 0.5s; }
-    .submit button[type="submit"]:hover {
-      color: #1c1d1d;
-      background-color: transparent; }
+
+button[type="submit"] {
+  letter-spacing: 2px;
+  font-family: 'JosefinBold';
+  padding: 10px 20px;
+  background-color: #1c1d1d;
+  color: white;
+  border: solid 2px #1c1d1d;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s; }
+  button[type="submit"]:hover {
+    color: #1c1d1d;
+    background-color: transparent; }
+
+label {
+  font-family: 'Josefin';
+  width: 100%; }
+
+input {
+  font-family: 'Josefin';
+  color: #1c1d1d; }
 
 h1 {
   font-family: 'Didot';
