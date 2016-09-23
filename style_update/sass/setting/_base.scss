@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------
+GENERAL STYLE
+--------------------------------------------------------------------*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $greyBody;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-family: 'Times';
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  float: left;
+  width: 100%;
+}
+
+#page_content_wrapper {
+  max-width: 1425px;
+  width: 100%;
+  @include box-sizing(border-box);
+  margin: auto;
+  padding: 0 60px;
+}
+
+.imgFullWidth {
+  width: 100%;
+}
+
+.italic {
+  font-style: italic;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 767px){
+  #page_content_wrapper {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 30px 0 30px;
+      @include box-sizing(border-box);
+  }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 768px){
+  #page_content_wrapper {
+      width: 100%;
+      margin-top: 0;
+      padding: 0 30px 0 30px;
+      @include box-sizing(border-box);
+  }
+}

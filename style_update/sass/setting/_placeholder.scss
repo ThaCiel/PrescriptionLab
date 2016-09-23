@@ -1,0 +1,22 @@
+/*------------------------------------------------------------------
+PLACEHOLDER SASS
+--------------------------------------------------------------------*/
+
+%flexbox {
+  display: inline-block; /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+%space {
+  display: inline-block; /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+}

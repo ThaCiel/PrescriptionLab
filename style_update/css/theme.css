@@ -1,3 +1,79 @@
+/*------------------------------------------------------------------
+SETTINGS
+--------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+MIXINS SASS
+--------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+PLACEHOLDER SASS
+--------------------------------------------------------------------*/
+#labox-page #content-coffret, #labox-page #abonnement-type {
+  display: inline-block;
+  /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+
+/*------------------------------------------------------------------
+GENERAL STYLE
+--------------------------------------------------------------------*/
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fafafa; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+p {
+  font-family: 'Times'; }
+
+li {
+  list-style: none; }
+
+section {
+  float: left;
+  width: 100%; }
+
+#page_content_wrapper {
+  max-width: 1425px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 60px; }
+
+.imgFullWidth {
+  width: 100%; }
+
+.italic {
+  font-style: italic;
+  font-weight: 100; }
+
+@media only screen and (max-width: 767px) {
+  #page_content_wrapper {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 30px 0 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; } }
+@media only screen and (max-width: 960px) and (min-width: 768px) {
+  #page_content_wrapper {
+    width: 100%;
+    margin-top: 0;
+    padding: 0 30px 0 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; } }
+/*------------------------------------------------------------------
+PART
+--------------------------------------------------------------------*/
 @font-face {
   font-family: 'Didot';
   src: url("../../font/didot/DidotLTPro-Roman.eot");
@@ -181,5 +257,230 @@ h3 {
     -moz-filter: invert(1);
     -o-filter: invert(1);
     -ms-filter: invert(1); }
+
+/*------------------------------------------------------------------
+BUTTON
+--------------------------------------------------------------------*/
+.btn {
+  background-color: #1c1d1d;
+  color: #ffffff;
+  border: 2px solid #1c1d1d;
+  padding: 15px 20px 10px 20px;
+  font-family: 'Josefin';
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 18px;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  .btn:hover {
+    background-color: #fff;
+    color: #1c1d1d; }
+
+.btn-clear {
+  background-color: #ffffff;
+  color: #1c1d1d;
+  border: 2px solid #1c1d1d;
+  padding: 15px 20px 10px 20px;
+  font-family: 'Josefin';
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 18px;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  .btn-clear:hover {
+    background-color: #1c1d1d;
+    color: #FFFFFF; }
+
+/*------------------------------------------------------------------
+PAGES
+--------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+LA BOX
+--------------------------------------------------------------------*/
+#labox-page {
+  /* la box section */
+  /* abonnement section */
+  /* services section */
+  /* responsive design */ }
+  #labox-page .labox {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1c1d1d; }
+    #labox-page .labox h1 {
+      font-family: 'DidotBold';
+      font-size: 50px;
+      color: #1c1d1d; }
+  #labox-page #content-coffret {
+    margin-top: 30px;
+    float: left;
+    padding: 0; }
+    #labox-page #content-coffret li {
+      width: 32%;
+      float: left;
+      margin: 1%;
+      height: 830px;
+      background-color: #FFF; }
+      #labox-page #content-coffret li h2 {
+        font-size: 30px;
+        margin-top: 0;
+        color: #1c1d1d; }
+      #labox-page #content-coffret li h3 {
+        font-size: 23px;
+        color: #1c1d1d;
+        margin-top: 15px; }
+      #labox-page #content-coffret li p {
+        font-family: 'Josefin';
+        font-size: 22px;
+        font-weight: 100;
+        color: #1c1d1d; }
+  #labox-page .content-coffret-text {
+    padding: 7% 18% 0 18%; }
+  #labox-page .number {
+    font-family: 'Josefin'; }
+  #labox-page .bold {
+    font-family: 'Josefin'; }
+  #labox-page .abonnement {
+    text-align: center;
+    color: #1c1d1d; }
+    #labox-page .abonnement h2 {
+      font-family: 'DidotBold';
+      font-size: 50px; }
+  #labox-page #abonnement-type {
+    margin-top: 30px;
+    float: left;
+    padding: 0;
+    width: 100%; }
+    #labox-page #abonnement-type li {
+      width: 32%;
+      float: left;
+      margin: 1%;
+      background-color: #FFF;
+      padding: 5% 2% 1% 2%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      #labox-page #abonnement-type li h3 {
+        font-family: 'Josefin';
+        text-transform: uppercase; }
+      #labox-page #abonnement-type li h4 {
+        font-family: 'Josefin';
+        text-transform: uppercase;
+        font-weight: 300; }
+      #labox-page #abonnement-type li .btn {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border: solid 2px #1c1d1d;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        display: block;
+        width: 60%;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px; }
+        #labox-page #abonnement-type li .btn:hover {
+          background-color: #fff;
+          color: #1c1d1d; }
+    #labox-page #abonnement-type .engagement {
+      font-family: 'Josefin';
+      text-transform: uppercase; }
+    #labox-page #abonnement-type .condition {
+      font-family: 'Josefin';
+      margin-top: 55px;
+      font-size: 13px; }
+  #labox-page .livraison {
+    clear: both;
+    padding-top: 30px; }
+  #labox-page .price {
+    font-size: 40px;
+    font-family: 'DidotBold';
+    letter-spacing: 5px;
+    line-height: 89px; }
+  #labox-page .services {
+    background-color: #FFFFFF;
+    margin-top: 30px;
+    text-align: center; }
+  #labox-page #services-list {
+    padding: 30px 0 20px 0;
+    float: left;
+    width: 100%; }
+    #labox-page #services-list li {
+      width: 24%;
+      float: left;
+      text-align: center; }
+      #labox-page #services-list li p {
+        font-family: 'Josefin'; }
+      #labox-page #services-list li h3 {
+        text-transform: uppercase;
+        font-family: 'Josefin'; }
+      #labox-page #services-list li img {
+        height: 80px; }
+  #labox-page .cgv-link {
+    text-decoration: underline;
+    font-family: 'Josefin';
+    text-align: center;
+    display: block;
+    margin-bottom: 30px; }
+    #labox-page .cgv-link strong {
+      text-transform: uppercase; }
+  @media only screen and (max-width: 767px) {
+    #labox-page #content-coffret {
+      display: block; }
+      #labox-page #content-coffret li {
+        width: 100%;
+        float: left;
+        margin: 0;
+        height: auto;
+        background-color: #FFF; }
+    #labox-page .abonnement h2 {
+      font-family: 'DidotBold';
+      font-size: 40px; }
+    #labox-page #abonnement-type {
+      display: block; }
+      #labox-page #abonnement-type li {
+        width: 100%; }
+    #labox-page .services {
+      background: none; }
+    #labox-page #services-list {
+      padding: 0; }
+    #labox-page #services-list li {
+      width: 48%;
+      float: left;
+      text-align: center;
+      margin: 1%;
+      background-color: #FFF;
+      padding: 3%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 225px; }
+    #labox-page #services-list h3 {
+      font-size: 15px; }
+    #labox-page .slider {
+      display: none; } }
+  @media only screen and (min-width: 768px) and (max-width: 960px) {
+    #labox-page #content-coffret li h2 {
+      font-size: 20px;
+      margin-top: 0;
+      color: #1c1d1d; }
+    #labox-page #content-coffret li {
+      height: 650px; }
+    #labox-page #services-list li h3 {
+      font-size: 15px; }
+    #labox-page #services-list li p {
+      font-size: 13px; }
+    #labox-page .price {
+      font-size: 30px; } }
 
 /*# sourceMappingURL=theme.css.map */
