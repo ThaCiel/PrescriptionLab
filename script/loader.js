@@ -1,3 +1,3 @@
-function fade(){
-    $('.loader').fadeOut(2000);
-}
+$(window).on('load', function() {
+    $(".loader").fadeOut("2000");
+});

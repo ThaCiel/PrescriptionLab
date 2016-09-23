@@ -16,5 +16,31 @@
     -moz-filter: invert(1);
     -o-filter: invert(1);
     -ms-filter: invert(1);
+
+    webkit-animation: square 3s ease infinite;
+    -moz-animation: square 3s ease infinite;
+    -o-animation: square 3s ease infinite;
+    animation: square 3s ease infinite;
+  }
+}
+
+@keyframes square {
+  0%{
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  50%{
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  100%{
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
   }
 }
