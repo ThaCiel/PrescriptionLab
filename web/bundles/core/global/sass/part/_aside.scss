@@ -1,0 +1,184 @@
+$font: 'Josefin Sans', sans-serif;
+$font_text: "Times New Roman";
+$black: #1c1d1d;
+
+@font-face {
+  font-family: 'didot';
+  src: url('../../../font/didot.eot'),
+  url('../../../font/didot.woff2') format('woff2'),
+  url('../../../font/didot.woff') format('woff'),
+  url('../../../font/didot.ttf')  format('truetype');
+}
+
+.sidebar_wrapper{
+  background-color: #fff;
+  padding: 5px;
+  font-family: $font;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black;
+  margin-bottom: 30px;
+  .image{
+    position: relative;
+    font-size: 0;
+    margin: 20px 0 10px 0;
+    .prescription_lab{
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      top: 0;
+      img{
+        width: 80%;
+        margin: 30% 0 0 0;
+      }
+    }
+    .frame{
+      position: absolute;
+      text-align: center;
+      width: 90%;
+      background-color: #fff;
+      top: 8%;
+      left: 5%;
+      &>p{
+        font-size: 14px;
+        padding: 15px 15px 30px 15px;
+        &>span{
+          font-family: 'didot';
+          font-size: 24px;
+          letter-spacing: 0;
+        }
+        &:first-child{
+          padding: 30px 20px 0 20px;
+        }
+      }
+      hr{
+        width: 80%;
+        margin: 5px auto 5px auto;
+      }
+    }
+  }
+  .social_frame{
+    position: absolute;
+    text-align: center;
+    width: calc(100% - 10px);
+    margin: 5px 5px 5px 5px;
+    background-color: transparent;
+    height: calc(100% - 10px);
+    top: 0;
+    transition: 0.5s;
+    &>p{
+      font-size: 20px !important;
+      margin-top: 13%;
+      font-family: 'didot';
+    }
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+  }
+  p{
+    padding: 20px 20px 0 20px;
+    &:first-child{
+      padding: 20px 20px 0 20px;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+  }
+  div + p{
+    font-family: $font_text;
+    font-size: 16px;
+    text-transform: none;
+  }
+  p + img{
+    padding: 20px 0 0 0;
+  }
+  .instagram_aside{
+    font-size: 0;
+    iframe{
+      height: 341px !important;
+    }
+    p{
+      font-size: 16px;
+      letter-spacing: 2px;
+      &:first-child{
+        font-family: 'didot';
+        font-style: italic;
+        font-size: 30px;
+        letter-spacing: 0;
+      }
+      & + p{
+        margin-bottom: 20px;
+      }
+    }
+    img{
+      width: calc((100% - 12px) / 3);
+      margin: 2px;
+    }
+  }
+  button{
+    background-color: $black;
+    color: #ffffff;
+    border: 2px solid $black;
+    padding: 15px 20px 10px 20px;
+    font-family: $font;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 18px;
+    transition: 0.5s;
+    &:hover{
+      background-color: #fff;
+      color: $black;
+    }
+  }
+  hr{
+    margin: 20px auto 20px auto;
+  }
+  .social_aside{
+    font-size: 0;
+    p{
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .image{
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1092px) {
+  .sidebar_wrapper {
+    p:first-child{
+      padding: 5px;
+    }
+    .image{
+      margin: 10px 0;
+      .frame > p:first-child{
+        padding: 5px;
+      }
+    }
+    div + p{
+      padding: 5px;
+    }
+    .instagram_aside {
+      iframe {
+        height: inherit !important;
+        min-height: 223px;
+      }
+      p:first-child{
+        padding: 20px 0 0 0;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: $medium) {
+  .sidebar_wrapper {
+    display: none !important;
+  }
+}

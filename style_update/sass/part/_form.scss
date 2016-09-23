@@ -1,0 +1,149 @@
+.header{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: $black;
+  color: $white;
+  margin-bottom: 60px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'JosefinBold';
+  letter-spacing: 1px;
+
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+
+    -moz-transform:rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.checkbox {
+  margin-bottom: 15px;
+
+  label {
+    display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    text-transform: none;
+    cursor: pointer;
+
+    &:before {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 25px;
+      height: 25px;
+      border: solid 2px $black;
+      background-color: $white;
+
+      transition: 0.5s;
+    }
+
+    &:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background: url('../../img/checked.png') no-repeat center center;
+      background-size: 17px 12px;
+
+      -moz-transform: scale(0);
+      -webkit-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+
+      -webkit-transition: all 0.2s ease 0s;
+      -moz-transition: all 0.2s ease 0s;
+      -ms-transition: all 0.2s ease 0s;
+      transition: all 0.2s ease 0s;
+    }
+  }
+  input {
+    position: absolute;
+    left: -999em;
+
+    &:checked + label {
+
+      &:before {
+        background-color: $black;
+      }
+
+      &:after {
+        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.input{
+  margin-top: 10px;
+
+  input[type="text"], textarea, input[type="email"], input[type="url"], input[type="date"], input[type="password"]{
+    display: block;
+    outline: none;
+    border: solid 1px $lightGrey;
+    padding: 10px;
+
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
+
+    &:focus{
+      border: solid 1px $lightGrey;
+
+      -webkit-box-shadow: 0px 0px 4px 1px $lightGrey;
+      -moz-box-shadow: 0px 0px 4px 1px $lightGrey;
+      -ms-box-shadow: 0px 0px 4px 1px $lightGrey;
+      box-shadow: 0px 0px 4px 1px $lightGrey;
+    }
+  }
+}
+
+.submit{
+  margin-top: 15px;
+
+  button[type="submit"]{
+    letter-spacing: 2px;
+    font-family: 'JosefinBold';
+    padding: 10px 20px;
+    background-color: $black;
+    color: $white;
+    border: solid 2px $black;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+
+    &:hover{
+      color: $black;
+      background-color: transparent;
+    }
+  }
+}

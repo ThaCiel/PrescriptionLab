@@ -1,0 +1,35 @@
+$grey: #919191;
+$medium:750px;
+$josefin:'Josefin Sans', 'sans-serif';
+$font:'Josefin Sans', 'sans-serif';
+$grey2: #94a5a5;
+$cream: #f6f6f6;
+$black: #1c1d1d;
+
+@font-face {
+  font-family: 'didot';
+  src: url('/bundles/pslcore/font/320457_0_0.eot'),
+  url('/bundles/pslcore/font/320457_0_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_0_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_0_0.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'didotBold';
+  src: url('/bundles/pslcore/font/320457_1_0.eot'),
+  url('/bundles/pslcore/font/320457_1_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_1_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_1_0.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'didotItalic';
+  src: url('/bundles/pslcore/font/320457_2_0.eot'),
+  url('/bundles/pslcore/font/320457_2_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_2_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_2_0.ttf')  format('truetype');
+}
+
+$didot:'didot';
+$didotBold:'didotBold';
+$didotItalic:'didotItalic';

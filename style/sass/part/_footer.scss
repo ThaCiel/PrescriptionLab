@@ -1,0 +1,246 @@
+$font: 'Josefin Sans', sans-serif;
+$font_text: "Times New Roman";
+$black: #1c1d1d;
+$border : 2px solid #ffffff;
+$grey: #919191;
+@font-face {
+  font-family: 'didot';
+  src: url('/bundles/pslcore/font/320457_0_0.eot'),
+  url('/bundles/pslcore/font/320457_0_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_0_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_0_0.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'didotBold';
+  src: url('/bundles/pslcore/font/320457_1_0.eot'),
+  url('/bundles/pslcore/font/320457_1_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_1_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_1_0.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'didotItalic';
+  src: url('/bundles/pslcore/font/320457_2_0.eot'),
+  url('/bundles/pslcore/font/320457_2_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_2_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_2_0.ttf')  format('truetype');
+}
+
+footer{
+  width: calc( 100% - calc( 100% / 6 ));
+  padding: 50px calc( 100% / 12 ) 40px calc( 100% / 12 );
+  font-weight: 400;
+  background-color: $black;
+  color: #ffffff;
+  *{
+    color: #fff;
+  }
+  a{
+    color: #ffffff;
+    &:hover{
+      color: $grey;
+    }
+  }
+  .b2, footer .b3, footer .b5{
+    margin-bottom: 30px;
+  }
+  h3{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: $font;
+  }
+  .newsletter h3{
+    -webkit-margin-after: 5px;
+  }
+  ul{
+    -webkit-padding-start: 0;
+  }
+  li{
+    list-style-type: none;
+    font-size: 18px;
+    height: 25px;
+    margin: 10px 0 0 0;
+    font-family: $font;
+    img{
+      margin: 0 15px -4px 0;
+      width: 25px;
+    }
+  }
+  p{
+    font-family: $font_text;
+    font-size: 17px;
+    line-height : 24px;
+    text-align: justify;
+    color: #fff;
+  }
+  .prescription{
+    .prescription-quote {
+      font-style: italic;
+    }
+    p{
+      width: 55%;
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    img{
+      float: left;
+    }
+  }
+  form{
+    margin-top: 40px;
+    p{
+      text-align: right;
+      -webkit-margin-after: 5px;
+      -webkit-margin-before: 5px;
+    }
+    input{
+      border: $border;
+      background-color: transparent !important;
+      padding: 10px 25px 10px 25px;
+      color: #fff;
+      font-size: 16px;
+      font-family: $font_text;
+      font-style: italic;
+      width: 75% !important;
+    }
+    button{
+      color: $black;
+      background-color: #ffffff;
+      border: $border;
+      font-weight: 600;
+      padding: 10px 35px 10px 35px;
+      cursor: pointer;
+/*      transition: 0.5s;*/
+      @include transition(0.5s);
+    }
+    button:hover{
+      color: #ffffff;
+      background-color: $black;
+      border: $border;
+    }
+  }
+  hr{
+    clear: both;
+  }
+  .credits{
+    clear: both;
+    text-align: center;
+    margin: 45px 0 0 0;
+    background-color: $black;
+    font-size: 14px;
+  }
+  input[type="email"], footer input[type="email"]:focus, footer input[type="email"]:active{
+    background-color: transparent !important;
+    color: #ffffff;
+  }
+}
+.top_footer{
+  clear: both;
+  font-size: 0;
+  background-color: #fff;
+  &>p{
+    font-family: 'didotBold';
+    font-size: 62px;
+    text-align: center;
+    padding: 50px 0 0 0;
+    &>span{
+      font-family: 'didotItalic';
+    }
+    & + p{
+      font-family: $font_text;
+      font-size: 24px;
+      font-weight: 400;
+      padding: 0;
+      margin: 0 0 50px 0;
+    }
+  }
+  img{
+    width: calc(100% / 5);
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+  }
+  img:hover{
+    opacity: 0.2;
+  }
+}
+@media screen and (max-width: 1300px) {
+  footer{
+    width: calc( 100% - 40px);
+    padding: 50px 20px 40px 20px;
+  }
+}
+@media screen and (max-width: 1092px) {
+  footer{
+    .prescription{
+      width: 100%;
+      text-align: center;
+      float: inherit;
+      margin-bottom: 20px;
+    }
+    .prescription img{
+      float: inherit;
+      max-width: 100px;
+    }
+    .prescription p{
+      display: none;
+    }
+    .prescription h3{
+      display: none;
+    }
+    .b2 h3{
+      display: none;
+    }
+    .info{
+      width: 100%;
+      text-align: center;
+    }
+    .info li{
+      height: 36px;
+    }
+    .social{
+      width: 100%;
+      text-align: center;
+    }
+    .social li{
+      display: inline;
+      margin: 0 5% 0 5%;
+    }
+    .social span{
+      display: none;
+    }
+    .social img{
+      width: 4%;
+      max-width: 60px;
+      min-width: 25px;
+    }
+  }
+  .top_footer {
+    & > p {
+      font-size: 42px;
+      & + p{
+        font-size: 21px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  footer .social li{
+    margin: 0 3% 0 3%;
+  }
+  .top_footer {
+    & > p {
+      font-size: 36px;
+      & + p{
+        font-size: 18px;
+      }
+    }
+  }
+}

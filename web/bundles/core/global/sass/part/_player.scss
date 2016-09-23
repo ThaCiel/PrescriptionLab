@@ -1,0 +1,53 @@
+.owl-theme .owl-controls .owl-buttons div{
+  color: #FFF;
+  display: inline-block;
+  zoom: 1;
+  margin: 5px;
+  padding: 4px 15px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background: #1C1D1D;
+  filter: Alpha(Opacity=50);
+  /* opacity: 0.5; */
+  font-size: 20px;
+}
+.player{
+  position: relative;
+  width: 100%;
+  button{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    left: 0;
+  }
+}
+.player_popin{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  padding: 100px 50px;
+  .cross{
+    width: 50px;
+    position: fixed;
+    right: 50px;
+    top: 25px;
+  }
+  .video{
+    width: calc(100% - 100px);
+    height: calc(100% - 200px);
+  }
+}
+.cross.white{
+  background-color: transparent;
+}

@@ -1,0 +1,796 @@
+@import 'worker/setting.scss';
+@import 'mixin/basic-mixin';
+@import 'worker/grid';
+
+body,html{
+  height: 100%;
+  min-height: 100%;
+}
+
+.histoire-page{
+  div, span, p{
+    box-sizing: border-box;
+  }
+}
+
+/*------------------------------------------*\
+
+                TEAM PART
+
+\*------------------------------------------*/
+
+
+.team-title{
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  h3{
+    color:black;
+
+    font-style: normal;
+
+    font-size: 36px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-family:$didotBold;
+
+    .t-italic{
+      font-style: italic;
+      font-family:$didot;
+    }
+  }
+
+
+  p{
+    color:lightgrey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family:"Times New Roman";
+    font-size: 20px;
+    font-weight: 400;
+    color: grey;
+  }
+
+  border-top:solid 1px lighten(grey,40%);
+  width: 100%;
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.team{
+  width: 100%;
+
+  box-sizing: content-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+
+
+  .portrait{
+
+    position: relative;
+    cursor: pointer;
+    .seemore{
+      cursor: pointer;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 10px;
+      top: 10px;
+      box-shadow: 0px 0px 1px 1px transparent inset;
+      @include transition(all 0.2s ease 0.2s);
+
+      &:before, &:after{
+        content:'';
+        position: absolute;
+        width: inherit;
+        height: 2px;
+
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: rgba(255,255,255,0.6);
+        @include transition(all 0.2s ease 0s);
+      }
+
+      &:after{
+        transform: rotate(90deg);
+      }
+      &:hover{
+        transform:scale(1.2);
+
+
+        border-radius: 50%;
+
+        &:before, &:after{
+          background-color: #fff;
+        }
+
+      }
+
+    }
+
+    display: inline-block;
+    height: auto;
+    background-color:black;
+    width: 100%;
+    position: relative;
+    img{
+      display: block;
+      border:none;
+      outline:none;
+      padding:0px;
+      width: 100%;
+      vertical-align: baseline;
+      object-fit: cover;
+    }
+
+    .name-team{
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color:white;
+      font-size:28px;
+      font-family: $josefin;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-style: italic;
+
+    }
+
+    .legend-team{
+      text-transform: uppercase;
+      padding-left: 20px;
+      font-size: 14px;
+      font-style: normal;
+    }
+  }
+
+}
+
+@media screen and (min-width: 440px) {
+
+  .team{
+    .portrait{
+      width: 50%;
+    }
+  }
+
+}
+
+@media screen and (min-width: $medium) {
+
+  .team{
+    .portrait{
+      width: 33.33%;
+    }
+  }
+  .team-title h3{
+    font-size: 46px;
+  }
+
+}
+
+
+
+
+/*------------------------------------------*\
+
+                FRESQUE PART
+
+\*------------------------------------------*/
+
+.fresque{
+
+  width: 100%;
+
+  .rowing{
+
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    &>div{
+      width: 100%;
+      height: 900px;
+    }
+
+  }
+
+
+
+  .fresque-screen1, .fresque-screen2{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    display: none;
+  }
+
+  .fresque-text1, .fresque-text2{
+
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+
+    display: flex;
+
+    @include transition(all 0.4s linear 0s);
+
+    &:before{
+      z-index: -1;
+      content:'';
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      width: inherit;
+      height: inherit;
+
+      background-size: cover;
+    }
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+  }
+
+  .fresque-text1:before{
+    background: url('../../img/declic.jpg') no-repeat center center;
+  }
+
+  .fresque-text2:before{
+    background: url('../../img/concept.jpg') no-repeat center center;
+  }
+
+  .mi-title{
+
+    text-transform: uppercase;
+    font-style: normal;
+
+  }
+
+}
+
+.group-text{
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  min-width: 304px;
+
+
+  h3{
+    padding-bottom: 40px;
+    color: #1c1d1d;
+    font-family: $didot;
+    font-size: 24px;
+    font-style: italic;
+  }
+  p{
+    font-family:'Times New Roman';
+    font-size: 20px;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .mi-title{
+    text-transform: uppercase;
+    font-style: normal;
+    font-family:$didotBold;
+  }
+}
+
+.presentation{
+  .group-text p{
+    font-size: 20px;
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: $medium) {
+
+  .fresque{
+
+    h3{
+      font-size: 44px;
+    }
+
+    .fresque-text1, .fresque-text2{
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .fresque-screen1, .fresque-screen2{
+      display: block;
+    }
+
+    .rowing{
+      flex-direction: row;
+
+
+      &>div{
+        width: 50%;
+      }
+    }
+
+    .group-text h3{
+      font-size: 38px;
+    }
+    .group-text p{
+      font-size: 20px;
+    }
+
+
+  }
+
+}
+
+@media screen and (min-width: $large) {
+
+  .fresque{
+    .group-text h3{
+      font-size: 52px;
+    }
+  }
+}
+
+/*------------------------------------------*\
+
+                Presentation Part
+
+\*------------------------------------------*/
+
+.presentation{
+
+  h3{
+    font-size: 24px;
+  }
+
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .group-text{
+    text-align: center;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1400px;
+    width: 100%;
+
+    p{
+      color:grey;
+    }
+  }
+
+}
+
+@media screen and (min-width: $medium){
+  .presentation h3{
+    font-size: 44px;
+  }
+}
+
+/*------------------------------------------*\
+
+                WALLPAPER TEAM PART
+
+\*------------------------------------------*/
+
+.wallpaper-team{
+  width: 100%;
+  position: relative;
+  text-align: center;
+  a{
+    display: none;
+  }
+
+  .logowhite{
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  img{
+    display: block;
+    width: 100%;
+  }
+
+  h1{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 40%;
+    color:white;
+    text-align: center;
+    font-size: 52px!important;
+    font-style: italic;
+    font-family: $didot;
+    .spe{
+      font-style: normal;
+      font-family:$didot;
+    }
+
+    @include transition(all 0.2s ease 0s);
+  }
+
+  nav{
+
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 150px;
+
+    width: 600px;
+    color:white;
+
+    a{
+      color:white;
+      display: inline-block;
+      padding-left: 8px;
+      padding-right: 8px;
+      height: 35px;
+      line-height: 35px;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: $josefin;
+      font-weight: bold;
+      letter-spacing: 2px;
+
+      @include transition(all 0.2s ease 0s);
+      &:hover{
+        background-color: rgba(#1c1c1c, 1);
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: $medium){
+  .wallpaper-team nav{
+    display: none;
+  }
+  .histoire-popup .info{
+    display: block !important;
+  }
+
+  .wrap_histoire-popup{
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+@media screen and (min-width: $medium){
+  .wallpaper-team nav{
+    display: none;
+  }
+  .histoire-popup .info{
+    display: block !important;
+  }
+
+  .wallpaper-team{
+    h1{
+      font-size: 80px !important;
+    }
+    .logowhite{
+      width: 300px;
+    }
+  }
+
+}
+
+@media screen and (min-width: $large){
+  .wallpaper-team nav{
+    display: block;
+  }
+
+  .wallpaper-team{
+    h1{
+      font-size: 150px !important;
+    }
+
+  }
+
+  .wallpaper-team a{
+    display: block;
+  }
+
+}
+/*------------------------------------------*\
+
+                POPUP PART
+
+\*------------------------------------------*/
+.wrap_histoire-popup{
+  background-color: #fff;
+  position: relative;
+  height: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 110;
+  width: 90%;
+  height: 90%;
+  opacity: 0;
+  transform:scale(0) translate3d(0px, -50px, 0px);
+
+}
+.cross-close{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  right: 30px;
+  top: 20px;
+  border:solid 1px transparent;
+
+  transition: all 0.4s ease 0s;
+
+  cursor: pointer;
+  z-index: 113;
+
+  &.switch{
+    &:before, &:after{
+      background-color: #1c1d1d;
+    }
+  }
+
+  &:hover{
+    border:solid 1px grey;
+  }
+
+  &:before, &:after{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: white;
+    background-color: #1c1c1c;
+
+    width: 100%;
+    height: 2px;
+    @include transition(all 0.4s ease 0s);
+
+  }
+
+  &:before{
+    transform:rotate(45deg);
+  }
+
+  &:after{
+    transform:rotate(-45deg);
+  }
+}
+
+.histoire-popup{
+
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  z-index: 101;
+  display: flex;
+
+  flex-direction: column;
+
+  .picture{
+    width: 100%;
+
+    background-color: rgb(2,12,17);
+    background-color: black;
+    text-align: center;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: 500px;
+      display: none;
+
+    }
+  }
+
+  .info{
+    padding-top: 20px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .maindescription{
+      box-sizing: border-box;
+      border-bottom:solid 1px #1c1c1c;
+      background-color: #fff;
+
+      padding-left: 20px;
+      padding-right: 20px;
+      min-height: 200px;
+
+
+      .group{
+        vertical-align: middle;
+        padding-bottom: 30px;
+        height: 100%;
+      }
+      h3{
+        margin: auto;
+        text-align: center;
+        color: #1c1d1d;
+        text-transform: uppercase;
+
+        font-size: 8vh;
+        font-family: $didot;
+        font-size: 35px;
+        font-style: italic;
+
+      }
+
+      p{
+        margin: auto;
+        text-align: center;
+        &.metier{
+          font-family: $josefin;
+          font-size: 29px;
+          font-weight: 400;
+          line-height: 58px;
+          text-transform: uppercase;
+        }
+
+        &.perso{
+          max-width: 744px;
+          color: #8f8f8f;
+          font-family: "Times New Roman";
+          font-size: 27px;
+          font-style: italic;
+        }
+      }
+
+    }
+
+    .description{
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #fff;
+
+
+      .group-description{
+        text-align: center;
+        max-width: 891px;
+        /*overflow-y: scroll;*/
+
+        h3{
+          font-family: $josefin;
+          color:#1c1c1c;
+          font-weight: 600;
+          text-transform: uppercase;
+          font-size: 27px;
+          margin-top: 8px;
+
+        }
+
+        p{
+          color:#1c1c1c;
+          font-weight: 400;
+          padding-top: 15px;
+          padding-bottom: 20px;
+          font-family:"Times New Roman";
+          color:#1c1d1d;
+          font-size: 20px;
+        }
+
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: $large){
+
+  .cross-close:before, .cross-close:after{
+    background-color: #1c1c1c;
+  }
+
+}
+
+@media screen and (min-width: $medium){
+
+  .wrapper-header{
+
+    header{
+
+    }
+  }
+
+  .histoire-popup{
+    .maindescription h3{
+      font-size: 55px !important;
+    }
+    .group-description{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1092px){
+  .wrapper-header{
+    height: 0px !important;
+    .b12.logo{
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: $large){
+
+  .histoire-popup{
+    flex-direction:row;
+    overflow-y: hidden;
+    .picture{
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+      }
+
+      &.laura{
+        background: url('../../img/laura-m.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.charlotte{
+        background: url('../../img/charlotte-m.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.awatif{
+        background: url('../../img/awatif-m.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.sarina{
+        background: url('../../img/sarina-m.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.fidji{
+        background: url('../../img/fidji-m.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      &.marion{
+        background: url('../../img/marion-m.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      background-size: cover;
+    }
+    .info{
+      overflow-y: scroll;
+    }
+  }
+}
+

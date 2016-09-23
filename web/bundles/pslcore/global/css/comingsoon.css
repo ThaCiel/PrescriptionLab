@@ -1,0 +1,85 @@
+body{
+  background: url('../../img/comingsoon.jpg') no-repeat center center;
+  background-size:cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+html{
+  background-color: transparent !important;
+}
+
+form{
+  padding: 0px !important;
+}
+
+form input[type='text']{
+  box-shadow:none !important;
+  border:none !important;
+  outline:none !important;
+}
+.comingsoon-page nav{
+  text-align: center;
+  margin: auto;
+  color: white;
+  margin-top: 45px;
+  max-width: 500px;
+}
+.comingsoon-page nav a{
+  color: white;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.comingsoon-page nav a:hover{
+  background-color: #1c1c1c;
+}
+.comingsoon-page .logo-link{
+  margin: auto;
+  display: block;
+  width: 30%;
+  margin-top: 20px;
+  min-width: 200px;
+}
+.comingsoon-page .logo-link img{
+  width: 100%;
+}
+.comingsoon{
+  text-align: center;
+  height: 78px;
+  color: white;
+  font-family: Didot;
+  font-size: 77px;
+  line-height: 77px;
+  font-style: italic;
+  height: 78px;
+  margin:auto;
+}
+.comingsoon span{
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1092px) {
+  form input[type='text']{
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .comingsoon-page nav a{
+    font-size: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

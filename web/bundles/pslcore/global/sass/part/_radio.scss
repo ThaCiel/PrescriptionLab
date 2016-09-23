@@ -1,0 +1,41 @@
+.video{
+  position: relative;
+  width: 100%;
+}
+video{
+  display: block;
+  margin:auto;
+  width: 100%;
+}
+.playpause{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: lighten(grey,25%);
+  border:solid 3px darken(grey,15%);
+  border:solid 3px transparent;
+  margin:auto;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+  border-radius: 50%;
+  @include transition(all 0.4s ease 0s);
+  &:before{
+    content:'';
+    position: absolute;
+    border-left:solid 35px white;
+    border-top:solid 25px transparent;
+    border-right:solid 35px transparent;
+    border-bottom:solid 25px transparent;
+    left: 50%;
+    margin-left: -12px;
+    top: 50%;
+    margin-top: -24px;
+  }
+  &.played{
+    transform: scale(1.6);
+    opacity: 0;
+    box-shadow:0px 0px 30px 10px lighten(grey,35%);
+  }
+}

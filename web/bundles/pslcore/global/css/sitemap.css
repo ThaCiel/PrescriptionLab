@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'didot';
+    src: url('/bundles/pslcore/font/didot.eot'),
+    url('/bundles/pslcore/font/didot.woff2') format('woff2'),
+    url('/bundles/pslcore/font/didot.woff') format('woff'),
+    url('/bundles/pslcore/font/didot.ttf')  format('truetype');
+}
+#page_content_wrapper{
+    width: 70%;
+}
+#page_caption.hasbg{
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page_caption #bg_blurred{
+    display: none;
+}
+#page_caption.hasbg .page_title_wrapper{
+    position: static;
+    bottom: 0;
+}
+#page_caption.hasbg h1{
+    font-family: 'didot';
+    font-size: 42px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#page_caption.hasbg h1 .italic{
+    text-transform: lowercase;
+    font-style: italic;
+}
+#page_content_wrapper .inner .sidebar_content.full_width{
+    max-width: calc(1092px - 80px);
+    margin: 30px auto 30px auto;
+    background-color: #fff;
+    padding: 40px;
+}
+#page_content_wrapper .inner .sidebar_content.full_width p{
+    color: #8f8f8f;
+    font-family: 'Times New Roman';
+    font-size: 22px;
+    line-height: 24px;
+}
+#page_content_wrapper .inner .sidebar_content.full_width .wsp-container h2{
+    font-family: 'didot';
+    font-size: 51px;
+    margin: 20px 0;
+    font-weight: 400;
+}
+#page_content_wrapper .inner .sidebar_content.full_width .wsp-container .wsp-posts-list{
+    list-style: none;
+}
+#page_content_wrapper .inner .sidebar_content.full_width .wsp-container .wsp-category-title{
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 400;
+}
+#page_content_wrapper .inner .sidebar_content.full_width .wsp-container li{
+    margin: 20px 0;
+}
+#page_content_wrapper .inner .sidebar_content.full_width .wsp-container li ul li{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 0 30px;
+}
+strong + .wsp-posts-list{
+    list-style: disc !important;
+}
+@media screen and (max-width: 1092px) {
+    #page_content_wrapper{
+        width: 100%;
+        padding: 0;
+    }
+    #page_content_wrapper .inner .sidebar_content.full_width{
+        width: calc(100% - 80px);
+    }
+}
+@media screen and (max-width: 768px) {
+    #page_caption h1{
+        font-size: 32px !important;
+    }
+    #page_content_wrapper .inner .sidebar_content.full_width .wsp-container h2{
+        font-size: 36px;
+    }
+    #page_content_wrapper .inner .sidebar_content.full_width{
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+}

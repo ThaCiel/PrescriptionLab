@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'didot';
+  src: url("/bundles/core/font/didot.eot"), url("/bundles/core/font/didot.woff2") format("woff2"), url("/bundles/core/font/didot.woff") format("woff"), url("/bundles/core/font/didot.ttf") format("truetype"); }
+#page_content_wrapper .sidebar_content {
+  background-color: #ffffff;
+  margin-bottom: 30px; }
+  #page_content_wrapper .sidebar_content .post_header {
+    padding: 10px 30px 10px 30px;
+    width: calc(100% - 60px); }
+    #page_content_wrapper .sidebar_content .post_header .post_info_cat {
+      position: relative;
+      text-align: left;
+      font-weight: 400; }
+      #page_content_wrapper .sidebar_content .post_header .post_info_cat:before {
+        content: none; }
+    #page_content_wrapper .sidebar_content .post_header p {
+      padding: 10px;
+      height: inherit; }
+  #page_content_wrapper .sidebar_content .author_content {
+    padding: 0 0 0 30px;
+    text-decoration: underline;
+    font-family: "Times New Roman"; }
+  #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper {
+    background-color: #ffffff;
+    padding: 10px;
+    width: calc(100% - 10px);
+    border-top: 20px solid #f6f6f6; }
+    #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper > p {
+      width: 50%;
+      float: left;
+      font-family: "didot";
+      font-style: italic;
+      font-size: 32px;
+      margin: 0 0 20px 20px; }
+    #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .write_comment {
+      background-color: #1c1d1d;
+      height: 100px;
+      width: 200px;
+      color: #ffffff;
+      font-family: "Josefin Sans";
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 600;
+      float: right;
+      cursor: pointer;
+      border: 2px solid #1c1d1d;
+      transition: 0.5s; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .write_comment p {
+        width: 90px;
+        float: right;
+        margin: 30px 20px 30px 0; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .write_comment img {
+        height: 50px !important;
+        margin: 25px 0 25px 30px;
+        transition: 0.5s; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .write_comment:hover {
+        background-color: #fff;
+        color: #1c1d1d; }
+        #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .write_comment:hover img {
+          filter: invert(1);
+          -webkit-filter: invert(1);
+          -moz-filter: invert(1);
+          -o-filter: invert(1);
+          -ms-filter: invert(1); }
+    #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper > div > div {
+      display: none; }
+    #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .children {
+      margin: 0 !important; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .children .comment {
+        margin: 0; }
+        #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .children .comment .right {
+          margin-left: 90px;
+          border-left: 1px solid #919191;
+          padding-left: 15px;
+          width: 74%; }
+    #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment {
+      display: block;
+      padding: 20px;
+      width: calc(100% - 40px); }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment .right a {
+        color: #000000; }
+        #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment .right a strong {
+          font-family: "Josefin Sans";
+          text-transform: uppercase;
+          letter-spacing: 2px; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment .right p {
+        font-family: "Times New Roman"; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment .right .comment_date {
+        font-style: inherit;
+        margin-left: 5px;
+        font-family: "Josefin Sans";
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment .right h7 {
+        font-family: "Josefin Sans";
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+      #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper .comment .right .comment-reply-link {
+        font-family: "Josefin Sans";
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+    #page_content_wrapper .sidebar_content .fullwidth_comment_wrapper #respond {
+      display: block; }
+#page_content_wrapper .sentence {
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: black;
+  color: white;
+  margin-bottom: 60px;
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase; }
+  #page_content_wrapper .sentence span {
+    position: relative;
+    z-index: 1; }
+  #page_content_wrapper .sentence:before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    transform: rotate(45deg); }
+#page_content_wrapper .post_header .post_header_title .post_detail.post_date {
+  text-align: left;
+  margin: 0 0 0 30px; }
+#page_content_wrapper .post_header .post_header_title h1 {
+  margin: 20px 0 20px 25px;
+  line-height: 45px;
+  font-weight: 400;
+  text-align: left;
+  font-family: 'didot';
+  transition: 0.5s; }
+  #page_content_wrapper .post_header .post_header_title h1:hover {
+    color: #fac8bf; }
+#page_content_wrapper h2.widgettitle {
+  text-align: left;
+  margin-left: 20px;
+  width: 50%;
+  float: left; }
+  #page_content_wrapper h2.widgettitle span.content_title {
+    border: 0;
+    text-transform: uppercase;
+    color: #919191;
+    font-family: "Josefin Sans";
+    font-weight: 400; }
+#page_content_wrapper .article_author {
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  font-weight: 600; }
+#page_content_wrapper .form-submit {
+  text-align: right; }
+  #page_content_wrapper .form-submit input[type=submit] {
+    background-color: #1c1d1d;
+    border: 2px solid #1c1d1d;
+    padding: 10px 15px;
+    transition: 1s; }
+    #page_content_wrapper .form-submit input[type=submit]:hover {
+      background-color: #ffffff;
+      color: #1c1d1d; }
+#page_content_wrapper .comment-form label {
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+#page_content_wrapper .comment-form .comment-form-author, #page_content_wrapper .comment-form .comment-form-email {
+  width: 50% !important; }
+#page_content_wrapper #social_share_wrapper ul {
+  text-align: right; }
+#page_content_wrapper #social_share_wrapper li {
+  display: inline-block;
+  margin: 0 10px; }
+
+/*# sourceMappingURL=article.css.map */

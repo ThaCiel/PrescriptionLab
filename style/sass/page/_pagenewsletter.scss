@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'didot';
+  src: url('/bundles/pslcore/font/320457_0_0.eot'),
+  url('/bundles/pslcore/font/320457_0_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_0_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_0_0.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'didotBold';
+  src: url('/bundles/pslcore/font/320457_1_0.eot'),
+  url('/bundles/pslcore/font/320457_1_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_1_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_1_0.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'didotItalic';
+  src: url('/bundles/pslcore/font/320457_2_0.eot'),
+  url('/bundles/pslcore/font/320457_2_0.woff2') format('woff2'),
+  url('/bundles/pslcore/font/320457_2_0.woff') format('woff'),
+  url('/bundles/pslcore/font/320457_2_0.ttf')  format('truetype');
+}
+
+.newsletter-page{
+  form{
+    margin-bottom: 30px;
+    padding-right: 10px;
+  }
+  .banner{
+    width: 100%;
+    height: 250px;
+    position: relative;
+
+    &:before{
+      content:'';
+      position: absolute;
+      width: inherit;
+      height:inherit;
+      left: 0px;
+      top: 0px;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    h1{
+      /* Base text style */
+      width: 100%;
+      line-height: 50px;
+      color: white;
+      font-family: 'didotBold';
+      font-size: 53px;
+      /* Text style for "Vos" */
+      font-weight: 400;
+      text-transform: uppercase;
+
+      span{
+        font-family: 'didotItalic';
+        font-weight: 400;
+        text-transform: capitalize;
+        font-size: 53px;
+        &.legende{
+          font-family: "Josefin Sans", "sans-serif";
+          font-weight: 400;
+          font-size: 24px;
+        }
+      }
+
+    }
+  }
+
+  .newsletter_text{
+    margin:auto;
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+    max-width: 700px;
+    min-width: 300px;
+    color:$grey;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .newsletter-page .banner h1 span{
+    font-size: 24px;
+    &.legende{
+      font-size: 18px;
+    }
+  }
+}

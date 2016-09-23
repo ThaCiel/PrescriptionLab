@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'didot';
+  src: url('/bundles/core/font/didot.eot'),
+  url('/bundles/core/font/didot.woff2') format('woff2'),
+  url('/bundles/core/font/didot.woff') format('woff'),
+  url('/bundles/core/font/didot.ttf')  format('truetype');
+}
+
+.faq-page{
+  .banner{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: url('../../img/contact.png') no-repeat center center;
+
+    background-size:cover;
+/*    background: url('../../img/contact.png') no-repeat center center;
+    background-size: 120%;*/
+    &:before{
+      content:'';
+      position: absolute;
+      width: inherit;
+      height:inherit;
+      left: 0px;
+      top: 0px;
+      background-color: rgba(0,0,0,0.6);
+    }
+    background-color: rgba(0,0,0,0.6);
+    img{
+      position: relative;
+      filter: brightness(50%);
+    }
+
+    h1{
+      position: absolute;
+      margin:0px;
+      padding: 0px;
+      text-align: center;
+      margin:auto;
+      top: 50%;
+      margin-top: -15px;
+      /* Base text style */
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      color: white;
+      font-family: Didot;
+      font-size: 53px;
+      /* Text style for "Vos" */
+      font-weight: 700;
+      text-transform: uppercase;
+      &:before{
+        content:'F.A.Q';
+        position: absolute;
+        font-family: $josefin;
+        font-size: 18px;
+        font-weight: 400;
+        width: 100%;
+        text-align: center;
+        top: -50px;
+        left: 0px;
+
+      }
+      span{
+        font-weight: normal;
+        font-style: italic;
+        text-transform: capitalize;
+      }
+
+    }
+
+  }
+
+  .question_wrap{
+    margin:auto;
+    margin-top: 60px;
+    background-color: #fff;
+    width: 90%;
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+
+    h2{
+
+      /* Base text style */
+      font-weight: 400;
+      line-height: 25px;
+      /* Text style for "The Beauty" */
+      color: #1c1d1d;
+      font-family: $josefin;
+      /* Text style for "Comment fo" */
+      font-size: 21px;
+      text-transform: uppercase;
+
+    }
+
+    p{
+      /* Text style for "Nous avons" */
+      color: #8f8f8f;
+      font-family: "Times New Roman";
+      font-size: 17px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+  }
+
+
+  .morequestion{
+    box-sizing:border-box;
+    width: 90%;
+    margin:auto;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+
+    h2{
+      width: 100%;
+      font-size: 25px;
+      font-weight: 400;
+      /* Text style for "Vous avez" */
+      color: #1c1d1d;
+      font-family: JosefinSans;
+      text-transform: uppercase;
+    }
+
+    p{
+      color: #8f8f8f;
+      font-family: "Times New Roman";
+    }
+
+    &:before{
+      content:'';
+      position: absolute;
+      left: 1px;
+      top: 0px;
+      height: 1px;
+      width:calc(100% - 2px);
+      background-color: $cream;
+    }
+  }
+}

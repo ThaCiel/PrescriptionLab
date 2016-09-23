@@ -1,0 +1,36 @@
+body{
+  background: url('../../img/comingsoon.png') no-repeat center center;
+  background-size:cover;
+  background-attachment: fixed;
+
+}
+html{
+  background-color: transparent !important;
+}
+
+form{
+  padding: 0px !important;
+}
+
+form input[type='text']{
+  box-shadow:none !important;
+  border:none !important;
+  outline:none !important;
+}
+
+.comingsoon{
+  text-align: center;
+  height: 78px;
+  color: white;
+  font-family: Didot;
+  font-size: 77px;
+  line-height: 77px;
+  font-style: italic;
+  height: 78px;
+  margin:auto;
+}
+.comingsoon span{
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}

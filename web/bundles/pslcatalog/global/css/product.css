@@ -1,0 +1,410 @@
+@font-face {
+  font-family: 'didot';
+  src: url("/bundles/pslcore/font/didot.eot"), url("/bundles/pslcore/font/didot.woff2") format("woff2"), url("/bundles/pslcore/font/didot.woff") format("woff"), url("/bundles/pslcore/font/didot.ttf") format("truetype"); }
+.search-field {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #d1d1d1;
+  position: relative; }
+  .search-field input[type="text"] {
+    width: 554px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+    border: 0;
+    color: #aaa;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    font-style: italic; }
+  .search-field input[type="submit"] {
+    border-radius: 0px;
+    width: 189px;
+    height: 52px;
+    line-height: 50px;
+    border: 2px solid #1c1d1d;
+    background-color: #1c1d1d;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer; }
+    .search-field input[type="submit"]:hover {
+      background-color: #fff;
+      color: #1c1d1d; }
+  .search-field img {
+    position: absolute;
+    left: 2px;
+    top: 1px; }
+
+.product {
+  width: 70%;
+  margin: 30px auto 0 auto;
+  font-family: "Josefin Sans", sans-serif; }
+  .product .illustration, .product .info {
+    background-color: #fff;
+    width: calc(50% - 70px);
+    float: left;
+    margin: 10px 5px 10px 5px;
+    padding: 30px;
+    min-height: 600px; }
+  .product .illustration {
+    text-align: center; }
+    .product .illustration img {
+      margin-top: 15%; }
+  .product .info span {
+    color: #919191;
+    letter-spacing: 2px;
+    font-size: 14px; }
+  .product .info .title + p {
+    color: #1c1d1d;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    letter-spacing: 2px; }
+    .product .info .title + p span {
+      float: right; }
+      .product .info .title + p span img {
+        width: 25px;
+        margin-top: -5px; }
+  .product .info h2 {
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 23px; }
+  .product .info ul {
+    list-style: none;
+    padding: 0; }
+    .product .info ul li {
+      margin: 10px 0 10px 0;
+      font-size: 18px;
+      font-weight: 600; }
+      .product .info ul li span {
+        color: #d1d1d1;
+        font-family: "Times New Roman";
+        font-weight: 400;
+        letter-spacing: inherit;
+        font-size: 18px; }
+  .product .info button {
+    background-color: #ff5959;
+    margin-top: 20px;
+    height: 55px;
+    width: 300px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #ff5959;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.5s; }
+    .product .info button:hover {
+      background-color: #fff;
+      color: #ff5959; }
+  .product .info a {
+    color: #d1d1d1;
+    text-decoration: underline;
+    transition: 0.5s;
+    font-size: 18px;
+    margin-left: 5%; }
+    .product .info a:hover {
+      color: #1c1d1d; }
+  .product .description {
+    clear: both;
+    width: calc(100% - 70px);
+    background-color: #fff;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Times New Roman";
+    margin: 5px; }
+    .product .description h3 {
+      font-family: "didot";
+      font-weight: 400;
+      font-size: 26px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #d1d1d1;
+      padding-bottom: 20px;
+      letter-spacing: 2px; }
+    .product .description p {
+      margin-bottom: 50px; }
+  .product .nav_review {
+    text-align: center;
+    margin: 15px 0; }
+    .product .nav_review button {
+      background-color: #fff;
+      border: 2px solid #d1d1d1;
+      height: 60px;
+      width: calc((100% / 3) - 3px);
+      cursor: pointer;
+      color: #ff5959;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 2px; }
+    .product .nav_review button + button {
+      border-left: none; }
+    .product .nav_review .active + button {
+      border-left: 2px solid #d1d1d1; }
+    .product .nav_review .active {
+      border: 2px solid #ff5959;
+      background-color: #ff5959;
+      color: #fff; }
+  .product .right, .product .left {
+    margin: 5px;
+    width: calc(50% - 70px);
+    float: left;
+    background-color: #fff;
+    padding: 30px; }
+    .product .right h4, .product .left h4 {
+      font-family: 'didot';
+      font-size: 22px;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      min-height: 70px; }
+    .product .right h5, .product .left h5 {
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: 2px;
+      border-bottom: 1px solid #d1d1d1;
+      padding-bottom: 15px; }
+      .product .right h5 div, .product .left h5 div {
+        height: 30px;
+        width: 30px;
+        background-color: #d1d1d1;
+        float: left;
+        border-radius: 25px;
+        text-align: center;
+        margin-top: -8px;
+        margin-right: 15px; }
+        .product .right h5 div img, .product .left h5 div img {
+          width: 15px;
+          margin-top: 7px; }
+    .product .right p, .product .left p {
+      line-height: 22px;
+      margin-bottom: 35px; }
+  .product .community_review {
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 35px;
+    text-align: center; }
+    .product .community_review .review + p {
+      margin: 50px 0; }
+    .product .community_review button {
+      width: 350px;
+      height: 70px;
+      border: 2px solid #ff5959;
+      background-color: #ff5959;
+      color: #fff;
+      text-transform: uppercase;
+      font: 20px "Josefin Sans", sans-serif;
+      cursor: pointer;
+      margin-bottom: 25px;
+      transition: 0.5s; }
+      .product .community_review button:hover {
+        background-color: #fff;
+        color: #ff5959; }
+    .product .community_review h4 {
+      text-transform: uppercase;
+      font: 42px 'didot';
+      font-weight: 400; }
+    .product .community_review > div {
+      position: relative;
+      width: 450px;
+      margin: 0 auto 50px auto; }
+      .product .community_review > div img {
+        margin: 0 2px; }
+      .product .community_review > div img + p {
+        position: absolute;
+        text-transform: uppercase;
+        text-decoration: underline;
+        top: 0;
+        right: 0;
+        color: #1c1d1d; }
+      .product .community_review > div p {
+        color: #d1d1d1;
+        font-size: 18px; }
+    .product .community_review .review {
+      width: 90%;
+      margin: 20px auto;
+      border: 2px solid #d1d1d1;
+      min-height: 280px;
+      position: relative; }
+      .product .community_review .review .content {
+        padding: 20px 20px 60px 20px;
+        width: calc(100% - 200px);
+        float: right; }
+        .product .community_review .review .content .title {
+          width: 100%;
+          border-bottom: 1px solid #d1d1d1;
+          padding: 5px 0 15px 0; }
+          .product .community_review .review .content .title p {
+            width: 150px;
+            float: left;
+            margin: 0;
+            text-transform: uppercase;
+            color: #1c1d1d;
+            font: 18px "Josefin Sans", sans-serif; }
+          .product .community_review .review .content .title span {
+            float: right; }
+            .product .community_review .review .content .title span img {
+              width: 20px; }
+        .product .community_review .review .content .useful {
+          text-align: right;
+          position: absolute;
+          bottom: 20px;
+          right: 20px; }
+          .product .community_review .review .content .useful span {
+            color: #d1d1d1;
+            margin-right: 10px; }
+          .product .community_review .review .content .useful button {
+            border: 2px solid #1c1d1d;
+            background-color: #1c1d1d;
+            color: #fff;
+            width: 60px;
+            height: 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font: 16px "Josefin Sans", sans-serif;
+            line-height: 30px;
+            margin: 0; }
+            .product .community_review .review .content .useful button:hover {
+              background-color: #fff;
+              color: #1c1d1d; }
+        .product .community_review .review .content p {
+          text-align: left;
+          color: #1c1d1d;
+          font: 16px "Times New Roman";
+          line-height: 22px; }
+      .product .community_review .review .header {
+        background-color: #d1d1d1;
+        width: 150px;
+        float: left;
+        height: 100%;
+        position: absolute; }
+        .product .community_review .review .header .profile_img {
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+          background-color: #fff;
+          margin: 20px auto 0 auto; }
+          .product .community_review .review .header .profile_img img {
+            margin-top: 10px; }
+        .product .community_review .review .header p {
+          margin: 0;
+          color: #1c1d1d; }
+        .product .community_review .review .header .user_name {
+          font: 16px "Josefin Sans", sans-serif; }
+        .product .community_review .review .header .lvl {
+          width: 80%;
+          margin: 5px auto 10px auto;
+          border-bottom: 1px solid #1c1d1d;
+          font: 16px "Josefin Sans", sans-serif;
+          font-weight: 600;
+          font-style: italic;
+          padding-bottom: 20px; }
+        .product .community_review .review .header .n_review, .product .community_review .review .header .review_useful {
+          margin: 25px auto;
+          text-align: left;
+          width: 80%;
+          font: 16px "Josefin Sans", sans-serif; }
+          .product .community_review .review .header .n_review img, .product .community_review .review .header .review_useful img {
+            margin-bottom: -3px;
+            margin-right: 10px; }
+  .product .your_review {
+    background-color: #fff;
+    padding: 35px;
+    margin-top: 15px; }
+    .product .your_review input[type="submit"] {
+      background-color: #ff5959;
+      margin-top: 20px;
+      height: 55px;
+      width: 300px;
+      text-align: center;
+      color: #fff;
+      border: 2px solid #ff5959;
+      cursor: pointer;
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 2px;
+      font-weight: 600;
+      transition: 0.5s; }
+      .product .your_review input[type="submit"]:hover {
+        background-color: #fff;
+        color: #ff5959; }
+    .product .your_review .review_header {
+      position: relative;
+      width: calc(80% + 40px);
+      margin: 25px auto; }
+      .product .your_review .review_header img {
+        width: 130px;
+        float: left;
+        margin: 0 20px 25px 0; }
+      .product .your_review .review_header span {
+        position: absolute;
+        left: 150px;
+        top: 90px; }
+        .product .your_review .review_header span img {
+          width: 30px;
+          margin: 3px; }
+        .product .your_review .review_header span p {
+          margin: 5px 20px;
+          font-weight: 600;
+          font-style: italic; }
+      .product .your_review .review_header p {
+        width: 250px;
+        float: left;
+        text-align: left;
+        line-height: 25px;
+        font-size: 18px; }
+    .product .your_review h4 {
+      font-family: 'didot';
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-top: 10px; }
+    .product .your_review > div {
+      border: 1px solid #d1d1d1; }
+    .product .your_review form {
+      text-align: center; }
+      .product .your_review form p {
+        text-align: right;
+        width: calc(80% + 40px);
+        margin: 0px auto 20px auto; }
+      .product .your_review form input, .product .your_review form textarea {
+        width: 80%;
+        margin: 15px auto;
+        padding: 20px;
+        font: 18px "Josefin Sans", sans-serif; }
+      .product .your_review form #review_content {
+        height: 250px;
+        line-height: 25px; }
+
+@media screen and (max-width: 1500px) {
+  .product {
+    width: 85%; } }
+@media screen and (max-width: 1300px) {
+  .product {
+    width: 95%; } }
+@media screen and (max-width: 1092px) {
+  .product .illustration, .product .info {
+    width: calc(100% - 70px);
+    min-height: inherit; }
+  .product .illustration img {
+    margin-top: 4%; }
+
+  .search-field {
+    display: none; } }
+
+/*# sourceMappingURL=product.css.map */

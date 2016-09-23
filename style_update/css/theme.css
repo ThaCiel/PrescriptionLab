@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Didot';
+  src: url("../../font/didot/DidotLTPro-Roman.eot");
+  src: url("../../font/didot/DidotLTPro-Roman.eot?#iefix") format("embedded-opentype"), url("../../font/didot/DidotLTPro-Roman.woff2") format("woff2"), url("../../font/didot/DidotLTPro-Roman.woff") format("woff"), url("../../font/didot/DidotLTPro-Roman.ttf") format("truetype"), url("../../font/didot/DidotLTPro-Roman.svg#DidotLTPro-Roman") format("svg"); }
+@font-face {
+  font-family: 'DidotBold';
+  src: url("../../font/didotBold/DidotLTPro-Bold.eot");
+  src: url("../../font/didotBold/DidotLTPro-Bold.eot?#iefix") format("embedded-opentype"), url("../../font/didotBold/DidotLTPro-Bold.woff2") format("woff2"), url("../../font/didotBold/DidotLTPro-Bold.woff") format("woff"), url("../../font/didotBold/DidotLTPro-Bold.ttf") format("truetype"), url("../../font/didotBold/DidotLTPro-Bold.svg#DidotLTPro-Bold") format("svg"); }
+@font-face {
+  font-family: 'DidotItalic';
+  src: url("../../font/didotItalic/DidotLTPro-Italic.eot");
+  src: url("../../font/didotItalic/DidotLTPro-Italic.eot?#iefix") format("embedded-opentype"), url("../../font/didotItalic/DidotLTPro-Italic.woff2") format("woff2"), url("../../font/didotItalic/DidotLTPro-Italic.woff") format("woff"), url("../../font/didotItalic/DidotLTPro-Italic.ttf") format("truetype"), url("../../font/didotItalic/DidotLTPro-Italic.svg#DidotLTPro-Italic") format("svg"); }
+@font-face {
+  font-family: 'Josefin';
+  src: url("../../font/josefin/JosefinSans.eot");
+  src: url("../../font/josefin/JosefinSans.eot?#iefix") format("embedded-opentype"), url("../../font/josefin/JosefinSans.woff2") format("woff2"), url("../../font/josefin/JosefinSans.woff") format("woff"), url("../../font/josefin/JosefinSans.ttf") format("truetype"), url("../../font/josefin/JosefinSans.svg#JosefinSans") format("svg"); }
+@font-face {
+  font-family: 'JosefinBold';
+  src: url("../../font/josefinBold/JosefinSans-Bold.eot");
+  src: url("../../font/josefinBold/JosefinSans-Bold.eot?#iefix") format("embedded-opentype"), url("../../font/josefinBold/JosefinSans-Bold.woff2") format("woff2"), url("../../font/josefinBold/JosefinSans-Bold.woff") format("woff"), url("../../font/josefinBold/JosefinSans-Bold.ttf") format("truetype"), url("../../font/josefinBold/JosefinSans-Bold.svg#JosefinSans-Bold") format("svg"); }
+.header {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: #1c1d1d;
+  color: white;
+  margin-bottom: 60px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'JosefinBold';
+  letter-spacing: 1px; }
+  .header:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+
+.checkbox {
+  margin-bottom: 15px; }
+  .checkbox label {
+    display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    text-transform: none;
+    cursor: pointer; }
+    .checkbox label:before {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 25px;
+      height: 25px;
+      border: solid 2px #1c1d1d;
+      background-color: white;
+      transition: 0.5s; }
+    .checkbox label:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background: url("../../img/checked.png") no-repeat center center;
+      background-size: 17px 12px;
+      -moz-transform: scale(0);
+      -webkit-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: all 0.2s ease 0s;
+      -moz-transition: all 0.2s ease 0s;
+      -ms-transition: all 0.2s ease 0s;
+      transition: all 0.2s ease 0s; }
+  .checkbox input {
+    position: absolute;
+    left: -999em; }
+    .checkbox input:checked + label:before {
+      background-color: #1c1d1d; }
+    .checkbox input:checked + label:after {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+
+.input {
+  margin-top: 10px; }
+  .input input[type="text"], .input textarea, .input input[type="email"], .input input[type="url"], .input input[type="date"], .input input[type="password"] {
+    display: block;
+    outline: none;
+    border: solid 1px lightgrey;
+    padding: 10px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s; }
+    .input input[type="text"]:focus, .input textarea:focus, .input input[type="email"]:focus, .input input[type="url"]:focus, .input input[type="date"]:focus, .input input[type="password"]:focus {
+      border: solid 1px lightgrey;
+      -webkit-box-shadow: 0px 0px 4px 1px lightgrey;
+      -moz-box-shadow: 0px 0px 4px 1px lightgrey;
+      -ms-box-shadow: 0px 0px 4px 1px lightgrey;
+      box-shadow: 0px 0px 4px 1px lightgrey; }
+
+.submit {
+  margin-top: 15px; }
+  .submit button[type="submit"] {
+    letter-spacing: 2px;
+    font-family: 'JosefinBold';
+    padding: 10px 20px;
+    background-color: #1c1d1d;
+    color: white;
+    border: solid 2px #1c1d1d;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s; }
+    .submit button[type="submit"]:hover {
+      color: #1c1d1d;
+      background-color: transparent; }
+
+h1 {
+  font-family: 'Didot';
+  font-weight: 400 !important; }
+
+h2 {
+  font-family: 'DidotBold';
+  font-weight: 400 !important; }
+  h2 a {
+    color: #1c1d1d;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none; }
+    h2 a:hover {
+      color: #fac8bf; }
+
+h3 {
+  font-family: 'DidotItalic';
+  font-weight: 400 !important; }
+
+/*# sourceMappingURL=theme.css.map */

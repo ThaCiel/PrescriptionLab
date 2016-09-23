@@ -1,0 +1,110 @@
+@import 'worker/setting.scss';
+@import 'mixin/basic-mixin';
+
+.popup{
+  padding-left: 10px;
+  padding-right: 10px;
+  ul{
+    list-style-type: none;
+  }
+  width: 80%;
+  height: 400px;
+  min-width: 400px;
+  max-width: 800px;
+/*  min-height: 400px;
+  max-height: 800px;*/
+  background-color: white;
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin:auto;
+  z-index: 12;
+
+  display: table;
+  padding-bottom: 30px;
+
+
+/*  opacity: 0;*/
+
+/*  display: flex;
+  flex-direction: column;
+  justify-content:space-around;*/
+
+
+  .popup_messageTitle{
+    color:$black;
+    font-family: $font;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 8px;
+    vertical-align: middle;
+    margin-top: 110px;
+    &.failure{
+      color: indianred;
+    }
+  }
+  .popup_message{
+    width: 60%;
+    color:$grey;
+    text-align: center;
+    margin:auto;
+    margin-top: 30px;
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-size: 22px;
+
+    &.failure{
+      color: rosybrown;
+    }
+  }
+
+  .popup_cross{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    @include transition(all 0.4s ease 0s);
+    @include border-radius(50%);
+/*    @include box-shadow(0px 0px 10px 10px white);*/
+    &:hover{
+/*      @include box-shadow(0px 0px 0px 1px lighten($grey,10%));
+      background-color: darken(white,5%);*/
+    }
+
+    &:before, &:after{
+      content:'';
+      position: absolute;
+      width: 44px;
+      height: 2px;
+
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      background-color: $black;
+    }
+
+    &:before{
+      transform: rotate(45deg);
+    }
+
+    &:after{
+      transform: rotate(-45deg);
+    }
+
+  }
+
+  transform:scale(0);
+}
+@media screen and (max-width: 1092px) {
+  .popup {
+    min-width: 0;
+  }
+}

@@ -1,0 +1,234 @@
+@font-face {
+  font-family: 'didot';
+  src: url('/bundles/core/font/didot.eot'),
+  url('/bundles/core/font/didot.woff2') format('woff2'),
+  url('/bundles/core/font/didot.woff') format('woff'),
+  url('/bundles/core/font/didot.ttf')  format('truetype');
+}
+
+$aboutus-height:850px;
+a{
+  text-decoration: none;
+}
+.aboutus-page{
+/*  background-color: #fff;*/
+  width: 100%;
+  min-width: 1248px;
+  margin:auto;
+
+  h1{
+    margin: 0;
+    padding: 0;
+  }
+
+  .media1-wrap, .aboutus-wrap, .media2-wrap, .contact-wrap{
+    height:$aboutus-height;
+    background-color: green;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    position: relative;
+  }
+
+  .media1-wrap{
+    background: url('../../img/calque-150.png') no-repeat center bottom;
+    background-size:cover;
+    z-index: 1;
+    &:before{
+      content:'';
+      position: absolute;
+      border-top:solid 20px transparent;
+      border-left:solid 20px lighten(grey,45%);
+      border-right:solid 20px transparent;
+      border-bottom:solid 20px transparent;
+      right: -40px;
+      top: 50%;
+      margin-top: -10px;
+    }
+  }
+  
+  .aboutus-wrap{
+    background-color: #fff;
+    padding-top: 130px;
+    padding-left: 30px;
+    padding-right: 30px;
+    h1{
+      text-align: center;
+      margin:auto;
+      margin-bottom: 30px;
+
+      color: #1c1d1d;
+      font-family: Didot;
+      font-size: 54px;
+      text-transform: uppercase;
+      /* Text style for "propos" */
+      font-weight: 700;
+
+      span{
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+
+    p{
+      margin:auto;
+      text-align: center;
+      color: #8f8f8f;
+      font-family: "Times New Roman";
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      padding: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+  }
+
+  .media2-wrap{
+    background: url('../../img/about_us_3.png') no-repeat center bottom;
+    background-size:cover;
+    &:before{
+      content:'';
+      position: absolute;
+      border-top:solid 20px transparent;
+      border-right:solid 20px lighten(grey,40%);
+      border-left:solid 20px transparent;
+      border-bottom:solid 20px transparent;
+      left: -40px;
+      top: 50%;
+      margin-top: -10px;
+    }
+  }
+
+  .contact-wrap{
+    padding-top: 220px;
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    h1{
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 40px;
+      /* Base text style */
+      text-align: center;
+      color: black;
+      font-family: Didot;
+      font-size: 54px;
+      /* Text style for "Contacter" */
+      font-weight: 700;
+      text-transform: uppercase;
+      span{
+        font-weight: normal;
+        font-style: italic;
+        text-transform: capitalize;
+      }
+    }
+
+    p{
+      /* Text style for "Une questi" */
+      margin:auto;
+      text-align: center;
+      color: #8f8f8f;
+      font-family: "Times New Roman";
+      font-size: 26px;
+      font-weight: 400;
+      @include box-sizing(border-box);
+      padding: 20px;
+    }
+
+    .contact-button{
+      /* Style for "Background" */
+      color:white;
+      max-width: 343px;
+      min-width: 243px;
+      height: 90px;
+      background-color: black;
+      margin:auto;
+      margin-top: 60px;
+      line-height: 90px;
+      text-align: center;
+      font-family: $josefin;
+      font-size: 23px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .clearer{
+    clear:both;
+    height: 0!important;
+  }
+
+  .video{
+    width: 100%;
+    height: 600px;
+    background-color: black;
+  }
+
+  .newsletter{
+    box-sizing:border-box;
+    padding-top: 74px;
+    width: 100%;
+    height: 381px;
+    background: url('../../img/calque-151.png') no-repeat center bottom;
+    background-size:cover;
+    text-align: center;
+    display: none;
+    h1{
+
+      color: #1c1d1d;
+      font-family: Didot;
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      span{
+        font-style: italic;
+        text-transform: capitalize;
+      }
+    }
+    h2{
+      box-sizing:border-box;
+      margin-top: 18px;
+      color: #1c1d1d;
+      font-family: $josefin;
+      font-size: 26px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    a{
+      box-sizing:border-box;
+      margin:auto;
+      margin-top: 34px;
+      display: block;
+      width: 409px;
+      height: 60px;
+      line-height: 60px;
+      background-color: white;
+      text-align: center;
+      text-decoration: none;
+      color: #1c1d1d;
+      font-family: $josefin;
+      font-size: 23px;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include transition(all 0.4s ease 0s);
+      &:hover{
+        background-color: #1c1d1d;
+        color:white;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width : $medium){
+  .aboutus-page{
+    min-width:$medium;
+    div{
+      float:none !important;
+      width: 100% !important;
+    }
+  }
+}

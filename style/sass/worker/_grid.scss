@@ -1,0 +1,65 @@
+$columns: 12!default;
+
+$gutter: 30px!default;
+
+$medium:780px;
+$large:1094px;
+
+.name{
+	height: 250px;
+	background-color: white;
+	margin-top: 5px;
+	box-sizing:border-box;
+	border:solid 1px rgba(200,200,200,0.8);
+}
+
+%col{
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding: 0 $gutter * 0.5;
+
+	box-sizing: border-box;
+	/*
+	border: solid 1px rgba(#000, 0.5);
+	background-color: rgba(#000, 0.2);
+	*/
+}
+
+.row{
+	width: 100%;
+	position: relative;
+	margin: 0 $gutter * -0.3;
+	overflow: hidden;
+	*zoom:1;
+}
+
+@for $i from 1 through $columns{
+	.col-#{$i}{
+		@extend %col;
+		width: $i / $columns * 100%;
+	}
+
+	.col-m-#{$i}, 
+	.col-l-#{$i}{
+		@extend %col;
+	}
+}
+
+@media only screen and (min-width:$medium){
+
+	@for $i from 1 through $columns{
+		.col-m-#{$i}{
+			width: $i / $columns * 100%;
+		}	
+	}
+}
+
+@media only screen and (min-width:$large){
+
+	@for $i from 1 through $columns{
+		.col-l-#{$i}{
+			width: $i / $columns * 100%;
+		}	
+	}
+}
