@@ -21,7 +21,7 @@ GENERAL STYLE
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background-color: #fafafa; }
 
@@ -174,6 +174,7 @@ input[type="text"], textarea, input[type="email"], input[type="url"], input[type
   outline: none;
   border: solid 1px lightgrey;
   padding: 10px;
+  font-family: 'Josefin';
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -239,6 +240,9 @@ h3 {
   font-family: 'DidotItalic';
   font-weight: 400 !important; }
 
+body.overflow {
+  overflow: hidden !important; }
+
 .loader {
   background-color: white;
   height: 100vh;
@@ -250,33 +254,59 @@ h3 {
   align-items: center;
   justify-content: center;
   z-index: 2; }
-  .loader img {
-    filter: invert(1);
-    -webkit-filter: invert(1);
-    -moz-filter: invert(1);
-    -o-filter: invert(1);
-    -ms-filter: invert(1);
-    webkit-animation: square 3s ease infinite;
-    -moz-animation: square 3s ease infinite;
-    -o-animation: square 3s ease infinite;
-    animation: square 3s ease infinite; }
+  .loader .animation {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation: square 3s infinite;
+    -moz-animation: square 3s infinite;
+    -o-animation: square 3s infinite;
+    animation: square 3s infinite; }
+    .loader .animation:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid black;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-radius: 100%; }
+    .loader .animation img {
+      width: 100%; }
 
 @keyframes square {
   0% {
     -moz-transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
-    transform: rotateY(360deg); }
+    transform: rotateY(360deg);
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    -moz-filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1); }
   50% {
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
-    transform: rotateY(180deg); }
+    transform: rotateY(180deg);
+    filter: invert(0);
+    -webkit-filter: invert(0);
+    -moz-filter: invert(0);
+    -o-filter: invert(0);
+    -ms-filter: invert(0); }
   100% {
     -moz-transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
-    transform: rotateY(360deg); } }
+    transform: rotateY(360deg);
+    opacity: 1;
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    -moz-filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1); } }
 /*------------------------------------------------------------------
 BUTTON
 --------------------------------------------------------------------*/
@@ -319,6 +349,30 @@ BUTTON
   .btn-clear:hover {
     background-color: #1c1d1d;
     color: #FFFFFF; }
+
+.aside .img-frame {
+  position: relative;
+  width: 40%;
+  margin: auto; }
+  .aside .img-frame img {
+    width: 100%; }
+  .aside .img-frame .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'DidotBold';
+    text-transform: uppercase;
+    transition: 0.5s; }
+    .aside .img-frame .frame:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white; }
 
 /*------------------------------------------------------------------
 PAGES
