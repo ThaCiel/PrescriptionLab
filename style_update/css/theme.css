@@ -301,6 +301,155 @@ BUTTON
     color: #FFFFFF; }
 
 /*------------------------------------------------------------------
+PANIER SIDEBAR
+--------------------------------------------------------------------*/
+.panier-sidebar {
+  position: fixed;
+  height: 100%;
+  width: 500px;
+  right: 0;
+  background-color: #1c1d1d;
+  color: #FFF;
+  padding: 2%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -moz-transform: translateX(500px);
+  -o-transform: translateX(500px);
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+  top: 0; }
+  .panier-sidebar h2 {
+    float: left; }
+  .panier-sidebar #closePanier {
+    float: right;
+    margin-top: 25px;
+    cursor: pointer; }
+  .panier-sidebar hr {
+    clear: both; }
+
+.panier-product-list {
+  padding: 0;
+  float: left;
+  width: 100%;
+  height: 64%;
+  overflow: auto; }
+  .panier-product-list li {
+    float: left;
+    width: 100%;
+    height: 139px;
+    margin-bottom: 15px; }
+
+.product-panier-title h4 {
+  font-family: 'Josefin';
+  text-transform: uppercase;
+  margin-top: 0px; }
+
+.img-product-panier {
+  float: left;
+  width: 35%; }
+
+.details-product-panier {
+  float: right;
+  width: 65%;
+  height: 100%;
+  display: inline-block;
+  /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-left: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.price-details .qty-box {
+  float: left;
+  width: 130px;
+  height: 40px;
+  border: solid 2px #FFF;
+  line-height: 40px;
+  text-align: center;
+  font-family: 'Josefin';
+  font-size: 20px; }
+  .price-details .qty-box .more {
+    float: left;
+    width: 35px;
+    border-right: solid 2px #FFF;
+    font-size: 30px;
+    cursor: pointer; }
+  .price-details .qty-box .less {
+    float: right;
+    width: 35px;
+    border-left: solid 2px #FFF;
+    font-size: 30px;
+    cursor: pointer; }
+.price-details .price {
+  float: right;
+  font-family: 'Josefin';
+  line-height: 44px;
+  font-size: 20px; }
+
+.total-panier {
+  font-family: 'Josefin';
+  font-size: 20px;
+  text-transform: uppercase; }
+  .total-panier .total {
+    float: right; }
+
+.go-checkout {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px; }
+  .go-checkout .btn-clear {
+    display: block;
+    margin: auto;
+    width: 60%; }
+
+.site-move {
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
+
+.panier-sidebar-open {
+  -moz-transform: translateX(-500px);
+  -o-transform: translateX(-500px);
+  -webkit-transform: translateX(-500px);
+  transform: translateX(-500px); }
+
+.panier-sidebar-active {
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .panier-sidebar {
+    width: 100%;
+    z-index: 1; }
+
+  .panier-product-list li {
+    height: 98px; }
+
+  .img-product-panier {
+    width: 110px; }
+
+  .product-panier-title h4 {
+    font-size: 15px; } }
+/*------------------------------------------------------------------
 PAGES
 --------------------------------------------------------------------*/
 /*------------------------------------------------------------------

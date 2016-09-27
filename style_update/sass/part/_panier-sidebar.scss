@@ -1,0 +1,176 @@
+/*------------------------------------------------------------------
+PANIER SIDEBAR
+--------------------------------------------------------------------*/
+
+$panierWidth : 500px;
+
+
+.panier-sidebar {
+  position: fixed;
+  height: 100%;
+  width: $panierWidth;
+  right: 0;
+  background-color: $black;
+  color: #FFF;
+  padding: 2%;
+  @include box-sizing(border-box);
+  @include transition(all 0.5s);
+  -moz-transform: translateX($panierWidth);
+  -o-transform: translateX($panierWidth);
+  -webkit-transform: translateX($panierWidth);
+  transform: translateX($panierWidth);
+  top: 0;
+  h2 {
+    float: left;
+  }
+  #closePanier {
+    float: right;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+  hr {
+    clear: both;
+  }
+}
+
+
+
+.panier-product-list {
+    padding: 0;
+    float: left;
+    width: 100%;
+    height: 64%;
+    overflow: auto;
+    li {
+      float: left;
+      width: 100%;
+      height: 139px;
+      margin-bottom: 15px;
+    }
+}
+
+.product-panier-title {
+  h4 {
+    font-family: 'Josefin';
+    text-transform: uppercase;
+    margin-top: 0px;
+  }
+}
+
+.img-product-panier {
+  float: left;
+  width: 35%;
+}
+
+.details-product-panier {
+  float: right;
+  width: 65%;
+  height: 100%;
+  display: inline-block; /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding-left: 10px;
+  @include box-sizing(border-box);
+}
+
+.price-details {
+  .qty-box {
+    float: left;
+    width: 130px;
+    height: 40px;
+    border: solid 2px #FFF;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Josefin';
+    font-size: 20px;
+    .more {
+      float: left;
+      width: 35px;
+      border-right: solid 2px #FFF;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .less {
+      float: right;
+      width: 35px;
+      border-left: solid 2px #FFF;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+  .price {
+    float: right;
+    font-family: 'Josefin';
+    line-height: 44px;
+    font-size: 20px;
+  }
+}
+
+.total-panier {
+  font-family: 'Josefin';
+  font-size: 20px;
+  text-transform: uppercase;
+  .total {
+    float: right;
+  }
+}
+
+.go-checkout {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  .btn-clear {
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
+}
+
+.site-move {
+  @include transition(all 0.5s);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.panier-sidebar-open {
+  -moz-transform: translateX($panierWidth * -1);
+  -o-transform: translateX($panierWidth * -1);
+  -webkit-transform: translateX($panierWidth * -1);
+  transform: translateX($panierWidth * -1);
+}
+
+.panier-sidebar-active {
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px) {
+
+  .panier-sidebar {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .panier-product-list li {
+    height: 98px;
+  }
+
+  .img-product-panier {
+    width: 110px;
+  }
+
+  .product-panier-title h4 {
+    font-size: 15px;
+  }
+
+}
