@@ -1,3 +1,7 @@
+body.overflow{
+  overflow: hidden !important;
+}
+
 .loader{
   background-color: $white;
   height: 100vh;
@@ -10,11 +14,74 @@
   justify-content: center;
   z-index: 2;
 
-  img{
-    filter: invert(1);
+  .animation{
+
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 100%;
+
+    -webkit-animation: square 3s infinite;
+    -moz-animation: square 3s infinite;
+    -o-animation: square 3s infinite;
+    -ms-animation: square 3s infinite;
+    animation: square 3s infinite;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 1px solid black;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      border-radius: 100%;
+    }
+    img{
+      width: 100%;
+    }
+
+  }
+}
+
+@keyframes square {
+  0%{
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+
     -webkit-filter: invert(1);
     -moz-filter: invert(1);
     -o-filter: invert(1);
     -ms-filter: invert(1);
+    filter: invert(1);
+  }
+  50%{
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    filter: invert(0);
+    -webkit-filter: invert(0);
+    -moz-filter: invert(0);
+    -o-filter: invert(0);
+    -ms-filter: invert(0);
+  }
+  100%{
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+    opacity: 1;
+
+    -webkit-filter: invert(1);
+    -moz-filter: invert(1);
+    -o-filter: invert(1);
+    -ms-filter: invert(1);
+    filter: invert(1);
   }
 }
