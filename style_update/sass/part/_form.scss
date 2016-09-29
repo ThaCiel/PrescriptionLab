@@ -98,7 +98,7 @@
   margin-top: 10px;
 }
 
-input[type="text"], textarea, input[type="email"], input[type="url"], input[type="date"], input[type="password"]{
+input[type="text"], textarea, select, input[type="email"], input[type="tel"], input[type="url"], input[type="date"], input[type="password"]{
   display: block;
   outline: none;
   border: solid 1px $lightGrey;
@@ -153,9 +153,58 @@ button[type="submit"]{
 label{
   font-family: 'Josefin';
   width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 17px;
 }
 
 input{
   font-family: 'Josefin';
   color: $black;
+  width: 100%;
+  @include box-sizing(border-box);
+}
+
+::-webkit-input-placeholder {
+   text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-transform: uppercase;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-transform: uppercase;
+}
+
+:-ms-input-placeholder {
+   text-transform: uppercase;
+}
+
+select {
+  width: 100%;
+  height: 33px;
+  border-radius: 0px;
+  border: none;
+  background: none;
+  border: solid 1px lightgray;
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  background-image: url('../../img/select.png');
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  font-family: 'Josefin';
+  color: $greyText;
+  text-transform: uppercase;
+}
+
+.fullInput {
+  width: 100%;
+}
+
+.midInput {
+  width: 48%;
+  float: left;
 }

@@ -1,0 +1,398 @@
+/*------------------------------------------------------------------
+PANIER
+--------------------------------------------------------------------*/
+
+/* HEAD PAGE TITLE */
+
+.title-page {
+  overflow: hidden;
+  background-color: #FFF;
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    font-family: 'DidotBold';
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .didot-italic {
+    text-transform: capitalize;
+  }
+  h5 {
+    text-transform: uppercase;
+    font-family: 'Josefin';
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mon compte section */
+
+.moncompte-box {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  .moncompte-container {
+    float: left;
+    width: 100%;
+    background-color: #FFF;
+  }
+  .left {
+    float: left;
+    width: 50%;
+    padding: 30px;
+    @include box-sizing(border-box);
+  }
+  .right {
+    float: right;
+    width: 50%;
+    padding: 30px;
+    @include box-sizing(border-box);
+  }
+}
+
+.ariane {
+  float: left;
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.ariane-link {
+  padding: 0;
+  li {
+    float: left;
+    text-transform: uppercase;
+    font-family: 'Josefin';
+    font-size: 15px;
+    color: $greyText;
+    &:after {
+      content: " > ";
+      font-family: arial;
+      margin: 0 3px 0 3px;
+    }
+    &:last-child{
+      &:after {
+        content: "";
+      }
+    }
+    .active {
+      color: #000;
+      font-family: 'JosefinBold';
+    }
+    a {
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+.left {
+  h2 {
+    text-transform: uppercase;
+    font-family: 'Josefin';
+    clear: both;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  hr {
+    border: none;
+    background-color: $greyBody;
+    height: 2px;
+  }
+  .use {
+    display: none;
+  }
+}
+
+#accountExist {
+  color: $greyText;
+  font-family: 'Josefin';
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+.livraisonAddress {
+  float: left;
+  width: 100%;
+  display: inline-block; /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.facturationAddress {
+    @extend .livraisonAddress;
+    border: solid 1px lightgrey;
+    border-top: none;
+    padding: 30px;
+    padding-top: 0px;
+    @include box-sizing(border-box);
+}
+
+.choice-address {
+  margin-top: 20px;
+  .checkbox {
+    border: solid 1px $lightGrey;
+    margin: 0;
+    padding: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 15px;
+    &:last-child {
+      border-top: none;
+    }
+  }
+}
+
+.right {
+  hr {
+    border: none;
+    background-color: $greyBody;
+    height: 2px;
+    clear: both;
+  }
+  .img-product-panier {
+    float: left;
+    width: 153px;
+  }
+  .details-product-panier {
+    display: table;
+    float: left;
+    width: calc(100% - 153px);
+  }
+  .product-panier-title {
+    display: table-cell;
+    vertical-align: bottom;
+    h4 {
+      float: left;
+      text-transform: capitalize;
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-family: 'JosefinBold';
+      width: 65%;
+    }
+    h5 {
+      float: right;
+      margin-top: 0;
+      font-size: 20px;
+      font-family: 'Josefin';
+      margin: 0;
+
+    }
+    h6 {
+      float: left;
+      width: 100%;
+      margin-top: 0px;
+      font-family: 'Josefin';
+      margin: 0;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 0;
+      margin-top: 15px;
+      float: left;
+      font-family: 'Josefin';
+    }
+  }
+}
+
+.reduction {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+  .btn {
+    height: 33px;
+    font-family: 'Josefin';
+    font-size: 10px;
+    line-height: 11px;
+    margin-top: 0px;
+  }
+}
+
+.total-checkout {
+  p {
+    font-family: 'Josefin';
+    font-size: 18px;
+  }
+  span {
+    float: right;
+    font-family: 'JosefinBold';
+  }
+  #total-commande {
+    font-size: 23px;
+  }
+}
+
+.validate {
+  width: 50%;
+  float: left;
+  clear: both;
+  padding: 30px;
+  @include box-sizing(border-box);
+  a {
+    font-family: 'Josefin';
+  }
+  .btn {
+    float: right;
+    margin: 0;
+    margin-top: -21px;
+    width: 230px;
+    text-align: center;
+  }
+}
+
+.montant-mobile {
+  height: 65px;
+  background-color: $black;
+  color: #FFF;
+  text-align: center;
+  line-height: 65px;
+  display: none;
+  p {
+    margin-top: 0px;
+    font-family: 'Josefin';
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+  .validate .btn {
+    float: right;
+    margin: 0;
+    margin-top: -21px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+@media (max-width:990px) {
+
+  .moncompte-box .moncompte-container {
+    float: left;
+    width: 100%;
+    background: none;
+  }
+
+  .montant-mobile {
+      display: block;
+  }
+
+  .price-mobile {
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  .ariane {
+    display: none;
+  }
+
+  .moncompte-box .left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .moncompte-box .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .email {
+    background-color: #FFF;
+    padding: 20px;
+  }
+
+  .adress-livraison, .adress-facturation {
+      float: left;
+      background-color: #FFF;
+      width: 100%;
+      margin: 15px 0 15px 0;
+      padding: 20px;
+      @include box-sizing(border-box);
+  }
+
+  .mail {
+    input {
+      margin-bottom: 20px;
+    }
+  }
+
+  .midInput {
+    width: 100%;
+    float: left;
+  }
+
+  .telephone, .pays, .entreprise, .save, .choice-address, .total-checkout, .reducButton {
+    display: none;
+  }
+
+  .left .use {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .livraisonAddress {
+      margin-bottom: 15px;
+  }
+
+  .facturationAddress {
+    display: block !important;
+    padding: 0;
+    border: none;
+  }
+
+  .fullInput {
+    float: left;
+  }
+
+  .right .panier-product-list {
+    display: none;
+  }
+
+  .reduction {
+    input {
+      margin-bottom: 15px;
+    }
+  }
+
+  .validate {
+    width: 100%;
+    display: inline-block; /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    -webkit-align-items: center;
+    align-items: center;
+    .btn {
+      margin-bottom: 20px;
+    }
+  }
+
+  .use {
+    label {
+      font-family: 'Times';
+      font-size: 14px;
+      color: $greyText;
+      @include box-sizing(border-box);
+    }
+  }
+
+  .reduction {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFF;
+  }
+
+
+}

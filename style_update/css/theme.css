@@ -7,6 +7,16 @@ MIXINS SASS
 /*------------------------------------------------------------------
 PLACEHOLDER SASS
 --------------------------------------------------------------------*/
+.list-choice-avis {
+  display: inline-block;
+  /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+
 #labox-page #content-coffret, #labox-page #abonnement-type {
   display: inline-block;
   /* non-flexbox browsers */
@@ -169,7 +179,7 @@ PART
 .input {
   margin-top: 10px; }
 
-input[type="text"], textarea, input[type="email"], input[type="url"], input[type="date"], input[type="password"] {
+input[type="text"], textarea, select, input[type="email"], input[type="tel"], input[type="url"], input[type="date"], input[type="password"] {
   display: block;
   outline: none;
   border: solid 1px lightgrey;
@@ -183,7 +193,7 @@ input[type="text"], textarea, input[type="email"], input[type="url"], input[type
   -moz-transition: all 0.2s ease 0s;
   -ms-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s; }
-  input[type="text"]:focus, textarea:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="password"]:focus {
+  input[type="text"]:focus, textarea:focus, select:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="date"]:focus, input[type="password"]:focus {
     border: solid 1px lightgrey;
     -webkit-box-shadow: 0px 0px 4px 1px lightgrey;
     -moz-box-shadow: 0px 0px 4px 1px lightgrey;
@@ -212,11 +222,57 @@ button[type="submit"] {
 
 label {
   font-family: 'Josefin';
-  width: 100%; }
+  width: 100%;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 17px; }
 
 input {
   font-family: 'Josefin';
-  color: #1c1d1d; }
+  color: #1c1d1d;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+::-webkit-input-placeholder {
+  text-transform: uppercase; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-transform: uppercase; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-transform: uppercase; }
+
+:-ms-input-placeholder {
+  text-transform: uppercase; }
+
+select {
+  width: 100%;
+  height: 33px;
+  border-radius: 0px;
+  border: none;
+  background: none;
+  border: solid 1px lightgray;
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  background-image: url("../../img/select.png");
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  font-family: 'Josefin';
+  color: #aaaaaa;
+  text-transform: uppercase; }
+
+.fullInput {
+  width: 100%; }
+
+.midInput {
+  width: 48%;
+  float: left; }
 
 h1 {
   font-family: 'Didot';
@@ -262,6 +318,7 @@ body.overflow {
     -webkit-animation: square 3s infinite;
     -moz-animation: square 3s infinite;
     -o-animation: square 3s infinite;
+    -ms-animation: square 3s infinite;
     animation: square 3s infinite; }
     .loader .animation:before {
       content: '';
@@ -279,16 +336,18 @@ body.overflow {
   0% {
     -moz-transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
-    filter: invert(1);
     -webkit-filter: invert(1);
     -moz-filter: invert(1);
     -o-filter: invert(1);
-    -ms-filter: invert(1); }
+    -ms-filter: invert(1);
+    filter: invert(1); }
   50% {
     -moz-transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
     filter: invert(0);
@@ -299,14 +358,15 @@ body.overflow {
   100% {
     -moz-transform: rotateY(360deg);
     -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
     -o-transform: rotateY(360deg);
     transform: rotateY(360deg);
     opacity: 1;
-    filter: invert(1);
     -webkit-filter: invert(1);
     -moz-filter: invert(1);
     -o-filter: invert(1);
-    -ms-filter: invert(1); } }
+    -ms-filter: invert(1);
+    filter: invert(1); } }
 /*------------------------------------------------------------------
 BUTTON
 --------------------------------------------------------------------*/
@@ -349,30 +409,6 @@ BUTTON
   .btn-clear:hover {
     background-color: #1c1d1d;
     color: #FFFFFF; }
-
-.aside .img-frame {
-  position: relative;
-  width: 40%;
-  margin: auto; }
-  .aside .img-frame img {
-    width: 100%; }
-  .aside .img-frame .frame {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    font-family: 'DidotBold';
-    text-transform: uppercase;
-    transition: 0.5s; }
-    .aside .img-frame .frame:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white; }
 
 /*------------------------------------------------------------------
 PANIER SIDEBAR
@@ -523,6 +559,30 @@ PANIER SIDEBAR
 
   .product-panier-title h4 {
     font-size: 15px; } }
+.aside .img-frame {
+  position: relative;
+  width: 40%;
+  margin: auto; }
+  .aside .img-frame img {
+    width: 100%; }
+  .aside .img-frame .frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'DidotBold';
+    text-transform: uppercase;
+    transition: 0.5s; }
+    .aside .img-frame .frame:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white; }
+
 /*------------------------------------------------------------------
 PAGES
 --------------------------------------------------------------------*/
@@ -704,5 +764,484 @@ LA BOX
       font-size: 13px; }
     #labox-page .price {
       font-size: 30px; } }
+
+/*------------------------------------------------------------------
+AVIS
+--------------------------------------------------------------------*/
+/* TOP HEAD STYLE */
+.top-head {
+  height: 60px;
+  width: 100%;
+  background-color: #fafafa; }
+  .top-head .left {
+    float: left; }
+    .top-head .left .btn {
+      margin: 0;
+      display: block;
+      height: 60px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      line-height: 30px;
+      float: left; }
+  .top-head .right {
+    float: right; }
+
+.top-head-social {
+  float: left;
+  padding-left: 10px; }
+  .top-head-social li {
+    float: left;
+    margin-left: 15px;
+    margin-top: -2px; }
+    .top-head-social li img {
+      opacity: 0.5;
+      -moz-transition: opacity 0.5s;
+      -o-transition: opacity 0.5s;
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s; }
+      .top-head-social li img:hover {
+        opacity: 1; }
+
+.top-head-user {
+  height: 60px;
+  margin: 0; }
+  .top-head-user li {
+    float: left;
+    height: 100%;
+    line-height: 60px;
+    font-family: 'Josefin';
+    padding-right: 20px;
+    padding-left: 20px;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s; }
+    .top-head-user li:hover {
+      background-color: #1c1d1d;
+      color: #FFF; }
+    .top-head-user li i {
+      margin-right: 8px; }
+
+/* AVIS SECTION */
+.avis-box {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.avis-box-header {
+  text-align: center; }
+  .avis-box-header .didot-italic {
+    text-transform: capitalize; }
+  .avis-box-header h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 10px 0px 10px 0px; }
+  .avis-box-header h5 {
+    font-family: 'Josefin';
+    text-transform: uppercase;
+    font-size: 15px; }
+  .avis-box-header p {
+    width: 45%;
+    margin: auto;
+    color: #b0b0b0; }
+
+.avis-choice {
+  width: 100%;
+  background-color: #FFF;
+  padding: 2%;
+  text-align: center;
+  margin-top: 50px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .avis-choice .question {
+    text-transform: uppercase;
+    font-family: 'JosefinBold';
+    letter-spacing: 3px;
+    font-size: 18px; }
+  .avis-choice .btn {
+    padding: 15px 20px 10px 20px; }
+
+.list-choice-avis {
+  float: left;
+  width: 100%; }
+
+#avis-choice-list {
+  padding: 0; }
+  #avis-choice-list li {
+    height: 120px;
+    width: 120px;
+    border-radius: 60px;
+    line-height: 120px;
+    float: left;
+    background-color: #1c1d1d;
+    color: #FFF;
+    font-family: 'DidotItalic';
+    margin: 0 15px 0 15px;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border: solid 2px #1c1d1d;
+    cursor: pointer; }
+
+.choice-button-activate {
+  background-color: #fafafa !important;
+  color: #1c1d1d !important; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  /* TOP HEAD */
+  .top-head {
+    display: none; }
+
+  .avis-box-header p {
+    width: 90%; }
+
+  #avis-choice-list {
+    display: inline-block;
+    /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    #avis-choice-list li {
+      height: 110px;
+      width: 110px;
+      border-radius: 55px;
+      line-height: 110px;
+      margin: 0 24px 30px 24px; }
+
+  .avis-choice .question {
+    font-size: 16px; } }
+@media (min-width: 768px) and (max-width: 990px) {
+  #avis-choice-list li {
+    height: 110px;
+    width: 110px;
+    border-radius: 55px;
+    line-height: 110px;
+    margin: 0 10px 0 10px; } }
+/*------------------------------------------------------------------
+PANIER
+--------------------------------------------------------------------*/
+/* HEAD PAGE TITLE */
+.title-page {
+  overflow: hidden;
+  background-color: #FFF;
+  text-align: center; }
+  .title-page h1 {
+    text-transform: uppercase;
+    font-family: 'DidotBold';
+    margin-top: 10px;
+    margin-bottom: 15px; }
+  .title-page .didot-italic {
+    text-transform: capitalize; }
+  .title-page h5 {
+    text-transform: uppercase;
+    font-family: 'Josefin';
+    margin-top: 25px;
+    margin-bottom: 10px; }
+
+/* Mon compte section */
+.moncompte-box {
+  margin-top: 30px;
+  margin-bottom: 50px; }
+  .moncompte-box .moncompte-container {
+    float: left;
+    width: 100%;
+    background-color: #FFF; }
+  .moncompte-box .left {
+    float: left;
+    width: 50%;
+    padding: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  .moncompte-box .right {
+    float: right;
+    width: 50%;
+    padding: 30px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.ariane {
+  float: left;
+  width: 100%;
+  padding: 30px;
+  padding-bottom: 0; }
+
+.ariane-link {
+  padding: 0; }
+  .ariane-link li {
+    float: left;
+    text-transform: uppercase;
+    font-family: 'Josefin';
+    font-size: 15px;
+    color: #aaaaaa; }
+    .ariane-link li:after {
+      content: " > ";
+      font-family: arial;
+      margin: 0 3px 0 3px; }
+    .ariane-link li:last-child:after {
+      content: ""; }
+    .ariane-link li .active {
+      color: #000;
+      font-family: 'JosefinBold'; }
+    .ariane-link li a:hover {
+      color: #1c1d1d; }
+
+.left h2 {
+  text-transform: uppercase;
+  font-family: 'Josefin';
+  clear: both;
+  margin-bottom: 10px;
+  margin-top: 30px; }
+.left hr {
+  border: none;
+  background-color: #fafafa;
+  height: 2px; }
+.left .use {
+  display: none; }
+
+#accountExist {
+  color: #aaaaaa;
+  font-family: 'Josefin'; }
+  #accountExist a {
+    color: #000;
+    text-decoration: underline; }
+
+.livraisonAddress, .facturationAddress {
+  float: left;
+  width: 100%;
+  display: inline-block;
+  /* non-flexbox browsers */
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.facturationAddress {
+  border: solid 1px lightgrey;
+  border-top: none;
+  padding: 30px;
+  padding-top: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.choice-address {
+  margin-top: 20px; }
+  .choice-address .checkbox {
+    border: solid 1px lightgrey;
+    margin: 0;
+    padding: 10px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 15px; }
+    .choice-address .checkbox:last-child {
+      border-top: none; }
+
+.right hr {
+  border: none;
+  background-color: #fafafa;
+  height: 2px;
+  clear: both; }
+.right .img-product-panier {
+  float: left;
+  width: 153px; }
+.right .details-product-panier {
+  display: table;
+  float: left;
+  width: calc(100% - 153px); }
+.right .product-panier-title {
+  display: table-cell;
+  vertical-align: bottom; }
+  .right .product-panier-title h4 {
+    float: left;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: 'JosefinBold';
+    width: 65%; }
+  .right .product-panier-title h5 {
+    float: right;
+    margin-top: 0;
+    font-size: 20px;
+    font-family: 'Josefin';
+    margin: 0; }
+  .right .product-panier-title h6 {
+    float: left;
+    width: 100%;
+    margin-top: 0px;
+    font-family: 'Josefin';
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 15px; }
+  .right .product-panier-title p {
+    margin-bottom: 0;
+    margin-top: 15px;
+    float: left;
+    font-family: 'Josefin'; }
+
+.reduction {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px; }
+  .reduction .btn {
+    height: 33px;
+    font-family: 'Josefin';
+    font-size: 10px;
+    line-height: 11px;
+    margin-top: 0px; }
+
+.total-checkout p {
+  font-family: 'Josefin';
+  font-size: 18px; }
+.total-checkout span {
+  float: right;
+  font-family: 'JosefinBold'; }
+.total-checkout #total-commande {
+  font-size: 23px; }
+
+.validate {
+  width: 50%;
+  float: left;
+  clear: both;
+  padding: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .validate a {
+    font-family: 'Josefin'; }
+  .validate .btn {
+    float: right;
+    margin: 0;
+    margin-top: -21px;
+    width: 230px;
+    text-align: center; }
+
+.montant-mobile {
+  height: 65px;
+  background-color: #1c1d1d;
+  color: #FFF;
+  text-align: center;
+  line-height: 65px;
+  display: none; }
+  .montant-mobile p {
+    margin-top: 0px;
+    font-family: 'Josefin';
+    text-transform: uppercase;
+    font-size: 14px; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .validate .btn {
+    float: right;
+    margin: 0;
+    margin-top: -21px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px; } }
+@media (max-width: 990px) {
+  .moncompte-box .moncompte-container {
+    float: left;
+    width: 100%;
+    background: none; }
+
+  .montant-mobile {
+    display: block; }
+
+  .price-mobile {
+    font-size: 25px;
+    margin-left: 15px; }
+
+  .ariane {
+    display: none; }
+
+  .moncompte-box .left {
+    width: 100%;
+    padding: 0; }
+
+  .moncompte-box .right {
+    width: 100%;
+    padding: 0; }
+
+  .email {
+    background-color: #FFF;
+    padding: 20px; }
+
+  .adress-livraison, .adress-facturation {
+    float: left;
+    background-color: #FFF;
+    width: 100%;
+    margin: 15px 0 15px 0;
+    padding: 20px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .mail input {
+    margin-bottom: 20px; }
+
+  .midInput {
+    width: 100%;
+    float: left; }
+
+  .telephone, .pays, .entreprise, .save, .choice-address, .total-checkout, .reducButton {
+    display: none; }
+
+  .left .use {
+    display: block;
+    margin-top: 15px; }
+
+  .livraisonAddress, .facturationAddress {
+    margin-bottom: 15px; }
+
+  .facturationAddress {
+    display: block !important;
+    padding: 0;
+    border: none; }
+
+  .fullInput {
+    float: left; }
+
+  .right .panier-product-list {
+    display: none; }
+
+  .reduction input {
+    margin-bottom: 15px; }
+
+  .validate {
+    width: 100%;
+    display: inline-block;
+    /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    -webkit-align-items: center;
+    align-items: center; }
+    .validate .btn {
+      margin-bottom: 20px; }
+
+  .use label {
+    font-family: 'Times';
+    font-size: 14px;
+    color: #aaaaaa;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  .reduction {
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFF; } }
 
 /*# sourceMappingURL=theme.css.map */

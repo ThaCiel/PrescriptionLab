@@ -1,0 +1,196 @@
+/*------------------------------------------------------------------
+AVIS
+--------------------------------------------------------------------*/
+
+
+/* TOP HEAD STYLE */
+
+.top-head {
+  height: 60px;
+  width: 100%;
+  background-color: $greyBody;
+  .left {
+    float: left;
+    .btn {
+      margin: 0;
+      display: block;
+      height: 60px;
+      @include box-sizing(border-box);
+      line-height: 30px;
+      float: left;
+    }
+  }
+  .right {
+    float: right;
+  }
+}
+
+.top-head-social {
+  float: left;
+  padding-left: 10px;
+  li {
+    float: left;
+    margin-left: 15px;
+    margin-top: -2px;
+    img {
+      opacity: 0.5;
+      @include transition(opacity 0.5s);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.top-head-user {
+  height: 60px;
+  margin: 0;
+  li {
+    float: left;
+    height: 100%;
+    line-height: 60px;
+    font-family: 'Josefin';
+    padding-right: 20px;
+    padding-left: 20px;
+    @include transition(all 0.5s);
+    &:hover {
+      background-color: $black;
+      color: #FFF;
+    }
+    i {
+      margin-right: 8px;
+    }
+  }
+}
+
+/* AVIS SECTION */
+
+.avis-box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.avis-box-header {
+  text-align: center;
+  .didot-italic {
+    text-transform: capitalize;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 10px 0px 10px 0px;
+  }
+  h5 {
+    font-family: 'Josefin';
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  p {
+    width: 45%;
+    margin: auto;
+    color: #b0b0b0;
+  }
+}
+
+.avis-choice {
+  width: 100%;
+  background-color: #FFF;
+  padding: 2%;
+  text-align: center;
+  margin-top: 50px;
+  @include box-sizing(border-box);
+  .question {
+    text-transform: uppercase;
+    font-family: 'JosefinBold';
+    letter-spacing: 3px;
+    font-size: 18px;
+  }
+  .btn {
+    padding: 15px 20px 10px 20px;
+  }
+}
+
+.list-choice-avis {
+  float: left;
+  width: 100%;
+  @extend %flexbox;
+}
+
+$avisLiSize : 120px;
+
+#avis-choice-list {
+  padding: 0;
+  li {
+    height: $avisLiSize;
+    width: $avisLiSize;
+    border-radius: $avisLiSize / 2;
+    line-height: $avisLiSize;
+    float: left;
+    background-color: $black;
+    color: #FFF;
+    font-family: 'DidotItalic';
+    margin: 0 15px 0 15px;
+    @include transition(all 0.5s);
+    border: solid 2px $black;
+    cursor: pointer;
+  }
+}
+
+.choice-button-activate{
+  background-color: $greyBody !important;
+  color: $black !important;
+}
+
+/* RESPONSIVE */
+
+$avisLiSizeResp : 110px;
+$avisLiSizeResp2 : 110px;
+
+@media (max-width:768px){
+
+  /* TOP HEAD */
+
+  .top-head {
+    display: none;
+  }
+
+  .avis-box-header p {
+    width: 90%;
+  }
+
+  #avis-choice-list {
+    display: inline-block; /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    li {
+      height: $avisLiSizeResp2;
+      width: $avisLiSizeResp2;
+      border-radius: $avisLiSizeResp2 / 2;
+      line-height: $avisLiSizeResp2;
+      margin: 0 24px 30px 24px;
+    }
+  }
+
+  .avis-choice .question {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width:768px) and (max-width:990px) {
+
+  #avis-choice-list {
+    li {
+      height: $avisLiSizeResp;
+      width: $avisLiSizeResp;
+      border-radius: $avisLiSizeResp / 2;
+      line-height: $avisLiSizeResp;
+      margin: 0 10px 0 10px;
+    }
+  }
+
+}
