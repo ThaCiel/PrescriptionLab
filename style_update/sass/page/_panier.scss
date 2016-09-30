@@ -288,6 +288,32 @@ PANIER
   }
 }
 
+/* CONFIRMATION */
+
+.confirmation {
+  text-align: center;
+  width: 100%;
+  background-color: #FFF;
+  margin-top: 30px;
+  padding: 15%;
+  @include box-sizing(border-box);
+  h2 {
+    text-transform: uppercase;
+    font-family: 'Josefin';
+    letter-spacing: 2px;
+  }
+  p{
+    color: #aaaaaa;
+    margin-bottom: 45px;
+    font-style: italic;
+    font-size: 19px;
+    font-weight: 100;
+  }
+  .btn {
+    margin-top: 30px;
+  }
+}
+
 
 /* RESPONSIVE */
 
@@ -446,6 +472,25 @@ PANIER
   #validate a {
     margin-top: 15px;
     text-align: center;
+  }
+
+  /* CONFIRMATION */
+
+  .confirmation {
+    h2 {
+      text-transform: uppercase;
+      font-family: 'Josefin';
+      letter-spacing: 2px;
+      font-size: 20px;
+    }
+    p {
+      font-size: 15px;
+    }
+    .btn {
+      word-wrap: break-word;
+      display: block;
+      font-size: 14px;
+    }
   }
 
 
