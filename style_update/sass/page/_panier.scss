@@ -261,6 +261,34 @@ PANIER
   }
 }
 
+/* PAGE LIVRAISON */
+
+.recap-adresse {
+  p {
+    color: $greyText;
+    font-family: 'Josefin';
+  }
+  a {
+    text-decoration: underline;
+    font-family: 'Josefin';
+  }
+}
+
+#validate {
+  padding-top: 0px;
+  a {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .btn {
+    display: inline;
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+
 /* RESPONSIVE */
 
 @media (max-width: 768px){
@@ -392,6 +420,32 @@ PANIER
     padding: 20px;
     box-sizing: border-box;
     background-color: #FFF;
+  }
+
+  /* LIVRAISON */
+
+  .recap-adresse {
+    background-color: #FFF;
+    padding: 20px;
+    h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+  }
+
+  .methode-livraison {
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .type-livraison {
+    font-size: 13px;
+  }
+
+  #validate a {
+    margin-top: 15px;
+    text-align: center;
   }
 
 

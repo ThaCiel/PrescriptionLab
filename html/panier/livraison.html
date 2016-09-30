@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Livraison</title>
+    <link rel="stylesheet" href="../../style_update/css/theme.css">
+  </head>
+  <body>
+
+    <!-- TITLE -->
+    <header class="title-page">
+      <h5>E-shop</h5>
+      <h1><span class="didot-italic">Ma</span>Commande</h1>
+    </header>
+
+    <!-- ONLY ON MOBILE -->
+    <div class="montant-mobile">
+      <p>
+        Montant de la commande: <span class="price-mobile">19,60€</span>
+      </p>
+    </div>
+
+    <!-- SECTION MON COMPTE -->
+    <section class="moncompte-box">
+      <div id="page_content_wrapper">
+        <div class="moncompte-container">
+
+          <!-- FIL D'ARIANE -->
+          <div class="ariane">
+            <ul class="ariane-link">
+              <li><a href="#">panier</a></li>
+              <li><a href="#">mes informations</a></li>
+              <li><a class="active" href="#">livraison</a></li>
+              <li><a href="#">Paiement</a></li>
+              <li><a href="#">confirmation</a></li>
+            </ul>
+          </div>
+
+          <!-- LEFT SIDE -->
+          <div class="left">
+            <div class="moncompte-informations">
+              <!-- Adresse récapitulatif -->
+              <div class="recap-adresse">
+                <h2>Mon adresse de livraison</h2><hr>
+                <p>
+                  Jane Doe<br>
+                  8 rue de la Boétie<br>
+                  75008 Paris<br>
+                  France<br>
+                  +331XXXXXXXX<br>
+                </p>
+                <a href="#">Modifier l’adresse de livraison</a>
+              </div>
+
+              <div class="methode-livraison">
+                <h2>Méthode de livraison</h2><hr>
+                <div class="type-livraison">
+                    <input type="checkbox" id="methode1" class="livraisonType">
+                    <label for="methode1">Option de Livraison 1 (description) 0.00€</label>
+                </div>
+                <div class="type-livraison">
+                    <input type="checkbox" id="methode2" class="livraisonType">
+                    <label for="methode2">Option de Livraison 1 (description) 3.55€</label>
+                </div>
+                <div class="type-livraison">
+                    <input type="checkbox" id="methode3" class="livraisonType">
+                    <label for="methode3">Option de Livraison 1 (description) 10.43€</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="right">
+            <ul class="panier-product-list">
+              <li>
+                <img class="img-product-panier" src="../../img/abonnement-panier.png" alt="abonnement" />
+                <div class="details-product-panier">
+                  <div class="product-panier-title">
+                    <h4>Crème Miracle Prescription</h4>
+                    <h5>130,00€</h5>
+                    <h6>Quantité: 1</h6>
+                    <p>
+                       5fl oz / 15ml
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul><hr>
+            <div class="reduction">
+              <form class="coupon-reduction">
+                <div class="input midInput">
+                    <label for="coupon">code de réduction :</label>
+                    <input type="text" id="coupon">
+                </div>
+                <div class="input midInput reducButton">
+                    <label for="coupon">&nbsp;</label>
+                    <button type="submit" name="button" class="btn">Mise à jour</button>
+                </div>
+              </form>
+            </div><hr>
+            <div class="total-checkout">
+              <p>Sous-total <span id="sous-total">130,00€</span></p>
+              <p>Livraison <span id="livraison">-</span></p><hr>
+              <p>Total <span id="total-commande">130,00€</span></p>
+            </div>
+          </div>
+
+          <div class="validate" id="validate">
+            <a href="#">< Revoir mes informations</a>
+            <a href="#" class="btn">Paiement</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <script src="../../script/jquery.min.js"></script>
+    <script src="../../script/livraison.js"></script>
+
+  </body>
+</html>

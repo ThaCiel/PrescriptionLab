@@ -176,6 +176,58 @@ PART
       -o-transform: scale(1);
       transform: scale(1); }
 
+.type-livraison {
+  margin-bottom: 15px;
+  border: solid 2px #fafafa;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .type-livraison label {
+    display: inline-block;
+    position: relative;
+    height: 25px;
+    line-height: 25px;
+    text-transform: none;
+    cursor: pointer; }
+    .type-livraison label:before {
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      right: 0px;
+      width: 25px;
+      height: 25px;
+      border: solid 2px #1c1d1d;
+      background-color: #FFF;
+      transition: 0.5s;
+      z-index: 9; }
+    .type-livraison label:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background: url("../../img/checked.png") no-repeat center center;
+      background-size: 17px 12px;
+      z-index: 9;
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: all 0.2s ease 0s;
+      -moz-transition: all 0.2s ease 0s;
+      -ms-transition: all 0.2s ease 0s;
+      transition: all 0.2s ease 0s; }
+  .type-livraison input {
+    position: absolute;
+    left: -999em; }
+    .type-livraison input:checked + label:before {
+      background-color: #1c1d1d; }
+    .type-livraison input:checked + label:after {
+      -moz-transform: scale(1);
+      -webkit-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+
 .input {
   margin-top: 10px; }
 
@@ -1138,6 +1190,25 @@ PANIER
     text-transform: uppercase;
     font-size: 14px; }
 
+/* PAGE LIVRAISON */
+.recap-adresse p {
+  color: #aaaaaa;
+  font-family: 'Josefin'; }
+.recap-adresse a {
+  text-decoration: underline;
+  font-family: 'Josefin'; }
+
+#validate {
+  padding-top: 0px; }
+  #validate a {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px; }
+  #validate .btn {
+    display: inline;
+    width: auto;
+    margin-bottom: 0; }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .validate .btn {
@@ -1242,6 +1313,26 @@ PANIER
   .reduction {
     padding: 20px;
     box-sizing: border-box;
-    background-color: #FFF; } }
+    background-color: #FFF; }
+
+  /* LIVRAISON */
+  .recap-adresse {
+    background-color: #FFF;
+    padding: 20px; }
+    .recap-adresse h2 {
+      margin-top: 0;
+      font-size: 18px; }
+
+  .methode-livraison {
+    background-color: #FFF;
+    padding: 20px;
+    margin-top: 20px; }
+
+  .type-livraison {
+    font-size: 13px; }
+
+  #validate a {
+    margin-top: 15px;
+    text-align: center; } }
 
 /*# sourceMappingURL=theme.css.map */
