@@ -8,97 +8,131 @@
   </head>
   <body>
 
-    <!-- BARRE EN HAUT DU HEADER -->
 
-    <div class="top-head">
-      <div class="left">
-        <a href="#" class="btn">Abonnez-vous</a>
-        <ul class="top-head-social">
-          <li>
-            <a href="#">
-              <img src="../img/facebook.png" alt="facebook" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/pinterest.png" alt="pinterest" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/twitter.png" alt="twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/instagram.png" alt="instagram" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="../img/yt.png" alt="youtube" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="right">
-        <ul class="top-head-user">
-          <li>
-            <a href="#"><i><img src="../img/user.png" alt="user" /></i>Mon compte</a>
-          </li>
-          <li>
-            <a href="#"><i><img src="../img/panier.png" alt="panier" /></i>Panier (0)</a>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- ONLY ON < 768px -->
-
-    <div class="account-button">
-      <a href="#" id="accountButton"></a>
-    </div>
-
-    <!-- SECTION AVIS -->
-    <section class="avis-box">
-      <div id="page_content_wrapper">
-        <header class="avis-box-header">
-          <h5>Mon compte</h5>
-          <h1><span class="didot-italic">Mes</span>avis</h1>
-          <p>
-            Chaque mois, vous pouvez donner votre avis sur les produits reçus dans votre Box en remplissant notre questionnaire. Cela nous aide à préparer des box toujours plus adaptées.
-          </p>
-        </header>
-        <div class="avis-choice">
-          <p class="question">votre réaction en ouvrant la box de Septembre?</p>
-          <div class="list-choice-avis">
-            <ul id="avis-choice-list">
-              <li class="choice-button">Déçue</li>
-              <li class="choice-button">Bored</li>
-              <li class="choice-button">Ok</li>
-              <li class="choice-button">Happy</li>
-              <li class="choice-button">J'adore!</li>
-            </ul>
-          </div>
-          <button type="submit" name="submit" class="btn">ENVOYER</button>
+      <!-- BARRE EN HAUT DU HEADER -->
+      <div class="top-head">
+        <div class="left">
+          <a href="#" class="btn">Abonnez-vous</a>
+          <ul class="top-head-social">
+            <li>
+              <a href="#">
+                <img src="../img/facebook.png" alt="facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/pinterest.png" alt="pinterest" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/twitter.png" alt="twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/instagram.png" alt="instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/yt.png" alt="youtube" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="top-head-user">
+            <li>
+              <a href="#"><i class="user-icon"></i>Mon compte</a>
+            </li>
+            <li>
+              <a href="#"><i class="panier-icon"></i>Panier (0)</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
 
+      <!-- ONLY ON < 768px -->
+
+      <div class="account-button">
+        <a href="#" id="accountButton"><i><img src="../img/woman.png" alt="woman" /></i><br>Mon compte</a>
+      </div>
+
+      <div class="account-menu-mobile">
+        <div class="close-mobile">
+          <img src="../img/close-white.png" alt="close" id="closeMobile"/>
+        </div>
+        <header>
+          <h5>Menu</h5>
+          <h2><span class="didot-italic">Mon</span>compte</h2>
+        </header>
+        <div class="navigation">
+          <ul class="mobile-navigation">
+            <li>
+              <a href="#">
+                <i><img src="../img/information-icon.png" alt="information-icon"/></i><br>
+                information
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/profilbeaute-icon.png" alt="profilbeaute-icon"/></i><br>
+                profile beauté
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/avis-icon.png" alt="avis-icon"/></i><br>
+                mes avis
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/parrainage-icon.png" alt="parrainage-icon"/></i><br>
+                Parrainage
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/historique-icon.png" alt="historique-icon"/></i><br>
+                historique
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION AVIS -->
+      <section class="avis-box">
+        <div id="page_content_wrapper">
+          <header class="avis-box-header">
+            <h5>Mon compte</h5>
+            <h1><span class="didot-italic">Mes</span>avis</h1>
+            <p>
+              Chaque mois, vous pouvez donner votre avis sur les produits reçus dans votre Box en remplissant notre questionnaire. Cela nous aide à préparer des box toujours plus adaptées.
+            </p>
+          </header>
+          <div class="avis-choice">
+            <p class="question">votre réaction en ouvrant la box de Septembre?</p>
+            <div class="list-choice-avis">
+              <ul id="avis-choice-list">
+                <li class="choice-button">Déçue</li>
+                <li class="choice-button">Bored</li>
+                <li class="choice-button">Ok</li>
+                <li class="choice-button">Happy</li>
+                <li class="choice-button">J'adore!</li>
+              </ul>
+            </div>
+            <button type="submit" name="submit" class="btn">ENVOYER</button>
+          </div>
+        </div>
+      </section>
+
+    <script src="../script/tweenMax.min.js"></script>
     <script src="../script/jquery.min.js"></script>
-    <script type="text/javascript">
-
-
-
-
-
-    $('.choice-button').on('click',function(){
-      $('.choice-button').removeClass('choice-button-activate');
-      $(this).addClass('choice-button-activate');
-    });
-
-
-    </script>
+    <script src="../script/account-nav-mobile.js"></script>
 
   </body>
 </html>

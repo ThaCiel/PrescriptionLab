@@ -872,8 +872,21 @@ AVIS
     .top-head-user li:hover {
       background-color: #1c1d1d;
       color: #FFF; }
+      .top-head-user li:hover .user-icon {
+        background: url("../../img/user-white.png") center center no-repeat; }
+      .top-head-user li:hover .panier-icon {
+        background: url("../../img/panier-white.png") center center no-repeat; }
     .top-head-user li i {
-      margin-right: 8px; }
+      margin-right: 8px;
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      vertical-align: middle;
+      margin-bottom: 6px; }
+    .top-head-user li .user-icon {
+      background: url("../../img/user.png") center center no-repeat; }
+    .top-head-user li .panier-icon {
+      background: url("../../img/panier.png") center center no-repeat; }
 
 /* AVIS SECTION */
 .avis-box {
@@ -1011,6 +1024,21 @@ AVIS
   .top-head {
     display: none; }
 
+  .account-menu-mobile h5 {
+    margin-top: 0; }
+
+  .account-menu-mobile h2 {
+    margin-bottom: 0; }
+
+  .mobile-navigation {
+    margin: 0; }
+
+  .mobile-navigation li img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 30px; }
+
+  /* AVIS SECTION */
   .avis-box-header p {
     width: 90%; }
 
