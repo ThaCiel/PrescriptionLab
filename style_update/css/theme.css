@@ -8,7 +8,7 @@ MIXINS SASS
 /*------------------------------------------------------------------
 PLACEHOLDER SASS
 --------------------------------------------------------------------*/
-.list-choice-avis {
+.list-choice-avis, .beauty-box-content, .leblog-content {
   display: inline-block;
   /* non-flexbox browsers */
   display: -webkit-inline-flex;
@@ -1628,5 +1628,152 @@ MES COMMANDES
   .personal-information .livraison-address, .personal-information .facturation-address, .personal-information .facturation-address {
     width: 24%;
     float: left; } }
+/*------------------------------------------------------------------
+HOME
+--------------------------------------------------------------------*/
+.home-container {
+  float: left;
+  width: 100%;
+  margin-top: -4px; }
+
+.beauty-box-row {
+  float: left;
+  height: 850px;
+  width: 100%; }
+
+.blog-row {
+  float: left;
+  height: 850px;
+  width: 100%; }
+
+.beauty-box-backgrond {
+  float: left;
+  height: 100%;
+  width: 50%;
+  background: url("../../img/beautybox-background.jpg");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+.beauty-box-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: #FFF;
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+  .beauty-box-content h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 18px; }
+  .beauty-box-content p {
+    width: 30%;
+    text-align: center;
+    margin-top: 0;
+    color: #aaaaaa; }
+
+.leblog-background {
+  float: right;
+  height: 100%;
+  width: 50%;
+  background: url("../../img/blog-background.jpg");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover; }
+
+.leblog-content {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #FFF;
+  flex-direction: column;
+  -webkit-flex-direction: column; }
+  .leblog-content h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 18px; }
+  .leblog-content p {
+    width: 30%;
+    text-align: center;
+    margin-top: 0;
+    color: #aaaaaa; }
+
+.our-manifest {
+  display: none; }
+
+@media (max-width: 990px) {
+  .beauty-box-row {
+    background: url("../../img/box-background-mobile.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline-block;
+    /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 750px; }
+
+  .beauty-box-backgrond {
+    display: none; }
+
+  .beauty-box-content {
+    height: auto;
+    width: 70%;
+    padding: 4%; }
+    .beauty-box-content p {
+      width: 70%; }
+
+  .blog-row {
+    background: url("../../img/blog-background-mobile.jpg");
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline-block;
+    /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 750px; }
+
+  .leblog-background {
+    display: none; }
+
+  .leblog-content {
+    height: auto;
+    width: 70%;
+    padding: 4%; }
+    .leblog-content p {
+      width: 70%; }
+
+  .our-manifest {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    display: block; }
+    .our-manifest h2 {
+      text-transform: uppercase;
+      font-size: 30px;
+      margin-bottom: 18px; }
+    .our-manifest .btn {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 30px; }
+    .our-manifest p {
+      color: #aaaaaa; } }
 
 /*# sourceMappingURL=theme.css.map */

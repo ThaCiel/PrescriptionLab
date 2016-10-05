@@ -1,0 +1,171 @@
+/*------------------------------------------------------------------
+HOME
+--------------------------------------------------------------------*/
+
+.home-container {
+  float: left;
+  width: 100%;
+  margin-top: -4px;
+}
+
+.beauty-box-row {
+  float: left;
+  height: 850px;
+  width: 100%;
+}
+
+.blog-row {
+  float: left;
+  height: 850px;
+  width: 100%;
+}
+
+.beauty-box-backgrond {
+  float: left;
+  height: 100%;
+  width: 50%;
+  background: url('../../img/beautybox-background.jpg');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.beauty-box-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  background-color: #FFF;
+  @extend %flexbox;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 18px;
+  }
+  p{
+    width: 30%;
+    text-align: center;
+    margin-top: 0;
+    color: $greyText;
+  }
+}
+
+.leblog-background {
+  float: right;
+  height: 100%;
+  width: 50%;
+  background: url('../../img/blog-background.jpg');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.leblog-content {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #FFF;
+  @extend %flexbox;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 18px;
+  }
+  p{
+    width: 30%;
+    text-align: center;
+    margin-top: 0;
+    color: $greyText;
+  }
+}
+
+.our-manifest {
+  display: none;
+}
+
+@media (max-width:990px){
+
+  .beauty-box-row {
+    background: url('../../img/box-background-mobile.jpg');
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline-block; /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 750px;
+  }
+  .beauty-box-backgrond {
+    display: none;
+  }
+  .beauty-box-content {
+    height: auto;
+    width: 70%;
+    padding: 4%;
+    p {
+      width: 70%;
+    }
+  }
+
+  .blog-row {
+    background: url('../../img/blog-background-mobile.jpg');
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline-block; /* non-flexbox browsers */
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 750px;
+  }
+  .leblog-background {
+    display: none;
+  }
+  .leblog-content {
+    height: auto;
+    width: 70%;
+    padding: 4%;
+    p {
+      width: 70%;
+    }
+  }
+
+  .our-manifest {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    display: block;
+    h2 {
+      text-transform: uppercase;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+    p {
+      color: $greyText;
+    }
+  }
+
+}
