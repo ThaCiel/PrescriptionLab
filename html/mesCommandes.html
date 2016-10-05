@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Avis</title>
+    <link rel="stylesheet" href="../style_update/css/theme.css">
+  </head>
+  <body>
+
+
+
+      <!-- BARRE EN HAUT DU HEADER -->
+      <div class="top-head">
+        <div class="left">
+          <a href="#" class="btn">Abonnez-vous</a>
+          <ul class="top-head-social">
+            <li>
+              <a href="#">
+                <img src="../img/facebook.png" alt="facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/pinterest.png" alt="pinterest" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/twitter.png" alt="twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/instagram.png" alt="instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/yt.png" alt="youtube" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="top-head-user">
+            <li>
+              <a href="#"><i class="user-icon"></i>Mon compte</a>
+            </li>
+            <li>
+              <a href="#"><i class="panier-icon"></i>Panier (0)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ONLY ON < 768px -->
+
+      <div class="account-button">
+        <a href="#" id="accountButton"><i><img src="../img/woman.png" alt="woman" /></i><br>Mon compte</a>
+      </div>
+
+      <div class="account-menu-mobile">
+        <div class="close-mobile">
+          <img src="../img/close-white.png" alt="close" id="closeMobile"/>
+        </div>
+        <header>
+          <h5>Menu</h5>
+          <h2><span class="didot-italic">Mon</span>compte</h2>
+        </header>
+        <div class="navigation">
+          <ul class="mobile-navigation">
+            <li>
+              <a href="#">
+                <i><img src="../img/information-icon.png" alt="information-icon"/></i><br>
+                information
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/profilbeaute-icon.png" alt="profilbeaute-icon"/></i><br>
+                profile beauté
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/avis-icon.png" alt="avis-icon"/></i><br>
+                mes avis
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/parrainage-icon.png" alt="parrainage-icon"/></i><br>
+                Parrainage
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/historique-icon.png" alt="historique-icon"/></i><br>
+                historique
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION MES COMMANDES -->
+      <div id="page_content_wrapper">
+        <section class="commandes-box">
+          <header class="commandes-box-header">
+            <h5>Mon compte</h5>
+            <h1><span class="didot-italic">Mes</span>commandes</h1>
+          </header>
+          <div class="myBox">
+            <h2><span class="didot-italic">Mes</span>Box</h2>
+            <table class="resume-commande">
+              <thead>
+                <tr>
+                  <th>Box</th>
+                  <th>État</th>
+                  <th>Adresse de livraison</th>
+                  <th>Paiement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Septembre 2016</td>
+                  <td>Livrée! <a href="#">Plus d'infos</a></td>
+                  <td>Jane Doe - 8 rue de la Boétie, 75008 Paris</td>
+                  <td>Validé!</td>
+                </tr>
+                <tr>
+                  <td>Octobre 2016</td>
+                  <td>Livrée! <a href="#">Plus d'infos</a></td>
+                  <td>Jane Doe - 8 rue de la Boétie, 75008 Paris</td>
+                  <td>Validé!</td>
+                </tr>
+                <tr>
+                  <td>Novembre 2016</td>
+                  <td>Livrée! <a href="#">Plus d'infos</a></td>
+                  <td>Jane Doe - 8 rue de la Boétie, 75008 Paris</td>
+                  <td>Validé!</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- ONLY ON < 768PX -->
+            <div class="dropdown-container">
+              <div class="dropdown">
+                <header>
+                  Box: Septembre 2016 | <span class="state">Livrée!</span> <br>
+                  <i><img src="../img/dropdown.png" alt="dropdown" id="dropdown" class="drop-button"/></i>
+                </header>
+                <div class="dropdown-details">
+                  <h5>ÉTAT</h5>
+                  <p>Livrée! <a href="#">En savoir plus</a></p>
+                  <h5>Adresse de livraison</h5>
+                  <p>8 rue de la Boétie<br>75008 Paris</p>
+                  <h5>Paiement</h5>
+                  <p>Validé!</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <header>
+                  Box: Octobre 2016 | <span class="state">Livrée!</span> <br>
+                  <i><img src="../img/dropdown.png" alt="dropdown" id="dropdown" class="drop-button"/></i>
+                </header>
+                <div class="dropdown-details">
+                  <h5>ÉTAT</h5>
+                  <p>Livrée! <a href="#">En savoir plus</a></p>
+                  <h5>Adresse de livraison</h5>
+                  <p>8 rue de la Boétie<br>75008 Paris</p>
+                  <h5>Paiement</h5>
+                  <p>Validé!</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <header>
+                  Box: Novembre 2016 | <span class="state">Livrée!</span> <br>
+                  <i><img src="../img/dropdown.png" alt="dropdown" id="dropdown" class="drop-button"/></i>
+                </header>
+                <div class="dropdown-details">
+                  <h5>ÉTAT</h5>
+                  <p>Livrée! <a href="#">En savoir plus</a></p>
+                  <h5>Adresse de livraison</h5>
+                  <p>8 rue de la Boétie<br>75008 Paris</p>
+                  <h5>Paiement</h5>
+                  <p>Validé!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="personal-information">
+              <h3>Informations personnelles</h3><hr>
+              <div class="livraison-address">
+                <h4>Adresse de livraison:</h4>
+                <p>
+                  Jane Doe <br> 8 rue de la Boétie <br> 75008 Paris
+                </p>
+              </div>
+              <div class="facturation-address">
+                <h4>Adresse de facturation:</h4>
+                <p>
+                  Jane Doe <br> 8 rue de la Boétie <br> 75008 Paris
+                </p>
+              </div>
+              <a href="#" class="btn">Modifier</a>
+            </div>
+
+            <div class="fidelity-point">
+              <h2><span class="didot-italic">Points</span>Fidélité</h2>
+              <h3>Total:   60 points</h3>
+              <p>
+                Soit 6€ à valoir sur le shop!
+              </p>
+              <div class="bouton-fidelity">
+                <a href="#" class="btn-clear">En savoir plus</a>
+                <a href="#" class="btn-clear">Gagner des points</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+    <script src="../script/tweenMax.min.js"></script>
+    <script src="../script/jquery.min.js"></script>
+    <script src="../script/account-nav-mobile.js"></script>
+    <script src="../script/mesCommandes.js"></script>
+
+  </body>
+</html>
