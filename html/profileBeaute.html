@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Avis</title>
+    <link rel="stylesheet" href="../style_update/css/theme.css">
+  </head>
+  <body>
+
+
+
+      <!-- BARRE EN HAUT DU HEADER -->
+      <div class="top-head">
+        <div class="left">
+          <a href="#" class="btn">Abonnez-vous</a>
+          <ul class="top-head-social">
+            <li>
+              <a href="#">
+                <img src="../img/facebook.png" alt="facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/pinterest.png" alt="pinterest" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/twitter.png" alt="twitter" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/instagram.png" alt="instagram" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="../img/yt.png" alt="youtube" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="top-head-user">
+            <li>
+              <a href="#"><i class="user-icon"></i>Mon compte</a>
+            </li>
+            <li>
+              <a href="#"><i class="panier-icon"></i>Panier (0)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ONLY ON < 768px -->
+
+      <div class="account-button">
+        <a href="#" id="accountButton"><i><img src="../img/woman.png" alt="woman" /></i><br>Mon compte</a>
+      </div>
+
+      <div class="account-menu-mobile">
+        <div class="close-mobile">
+          <img src="../img/close-white.png" alt="close" id="closeMobile"/>
+        </div>
+        <header>
+          <h5>Menu</h5>
+          <h2><span class="didot-italic">Mon</span>compte</h2>
+        </header>
+        <div class="navigation">
+          <ul class="mobile-navigation">
+            <li>
+              <a href="#">
+                <i><img src="../img/information-icon.png" alt="information-icon"/></i><br>
+                information
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/profilbeaute-icon.png" alt="profilbeaute-icon"/></i><br>
+                profile beauté
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/avis-icon.png" alt="avis-icon"/></i><br>
+                mes avis
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/parrainage-icon.png" alt="parrainage-icon"/></i><br>
+                Parrainage
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i><img src="../img/historique-icon.png" alt="historique-icon"/></i><br>
+                historique
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SECTION MON PROFIL BEAUTÉ -->
+      <div id="page_content_wrapper">
+        <section class="myProfil">
+          <header class="myProfil-header">
+            <h5>Mon compte</h5>
+            <h1><span class="didot-italic">Profil</span>Beauté</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </header>
+          <form class="profilBeaute-form">
+            <div class="radioType">
+              <h3>1. Quelle est votre profil ? </h3>
+              <ul>
+                <li>
+                  <input type="radio" id="addict" name="selector">
+                  <label for="addict">Je suis addict, je teste tout</label>
+                  <div class="check"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="basics" name="selector">
+                  <label for="basics">Je suis fan mais je reste fidèle à mes basics</label>
+                  <div class="check"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="naturel" name="selector">
+                  <label for="naturel">J'ai une routine simple et un style naturel</label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="radioType">
+              <h3>2. Votre environnement ?</h3>
+              <ul>
+                <li>
+                  <input type="radio" id="ultraP" name="selector1">
+                  <label for="ultraP">ultra pollué</label>
+                  <div class="check"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="pollue" name="selector1">
+                  <label for="pollue">pollué</label>
+                  <div class="check"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="nonPollue" name="selector1">
+                  <label for="nonPollue">non pollué</label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="header-radio">
+              <h1><span class="didot-italic">Votre</span>Peau</h1>
+            </div>
+            <div class="radioType">
+                <h3>3. Quel est votre type de peau ?</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="seche" name="selector2">
+                    <label for="seche">sèche</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="normale" name="selector2">
+                    <label for="normale">normale</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="mixte" name="selector2">
+                    <label for="mixte">mixte</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="grasse" name="selector2">
+                    <label for="grasse">grasse</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="radioColor">
+              <h3>4. Quel est votre couleur de peau ?</h3>
+              <ul>
+                <li>
+                  <input type="radio" id="tresclaire" name="selector3">
+                  <label for="tresclaire">très claire</label>
+                  <div class="check check-tresclaire"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="claire" name="selector3">
+                  <label for="claire">claire</label>
+                  <div class="check check-claire"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="medium" name="selector3">
+                  <label for="medium">medium</label>
+                  <div class="check check-medium"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="mate" name="selector3">
+                  <label for="mate">mate</label>
+                  <div class="check check-mate"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="foncee" name="selector3">
+                  <label for="foncee">foncée</label>
+                  <div class="check check-foncee"></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="radioType">
+                <h3>5. Quelles sont vos 2 principales préoccupations? </h3>
+                <div class="radioColumn">
+                  <div class="left">
+                    <ul>
+                      <li>
+                        <input type="radio" id="pore" name="selector4">
+                        <label for="pore">Pore dilatés et points noirs</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="rougeurs" name="selector4">
+                        <label for="rougeurs">Sensibilité - rougeurs</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="brillance" name="selector4">
+                        <label for="brillance">Brillance</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="eclat" name="selector4">
+                        <label for="eclat">éclat</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>
+                        <input type="radio" id="boutons" name="selector5">
+                        <label for="boutons">Boutons</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="taches" name="selector5">
+                        <label for="taches">Taches </label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="rides" name="selector5">
+                        <label for="rides">Rides, fermeté</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="secheress" name="selector5">
+                        <label for="secheress">Sécheresse de la peau</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+            <div class="radioType">
+                <h3>6. Ce qui vous chagrine avec vos yeux…</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="poches" name="selector6">
+                    <label for="poches">Leurs poches </label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="cernes" name="selector6">
+                    <label for="cernes">Leurs cernes</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="ridules" name="selector6">
+                    <label for="ridules">Leurs petites ridules </label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="good" name="selector6">
+                    <label for="good">Mes yeux vont très bien</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="header-radio">
+              <h1><span class="didot-italic">Vos</span>Cheveux</h1>
+            </div>
+            <div class="radioColor">
+              <h3>7. Quelle est la couleur naturelle de vos cheveux? </h3>
+              <ul>
+                <li>
+                  <input type="radio" id="blond" class="hairSelector" name="selector7">
+                  <label for="blond">blond</label>
+                  <div class="check check-blond"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="chatain" class="hairSelector" name="selector7">
+                  <label for="chatain">Châtain</label>
+                  <div class="check check-chatain"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="roux" class="hairSelector" name="selector7">
+                  <label for="roux">roux</label>
+                  <div class="check check-roux"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="brun" class="hairSelector" name="selector7">
+                  <label for="brun">brun</label>
+                  <div class="check check-brun"></div>
+                </li>
+
+                <li>
+                  <input type="radio" id="noir" class="hairSelector" name="selector7">
+                  <label for="noir">noir</label>
+                  <div class="check check-noire"></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="radioType">
+                <h3>8. Quelle est la nature de vos cheveux? </h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="lisse" name="selector8">
+                    <label for="lisse">Lisse</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="ondulee" name="selector8">
+                    <label for="ondulee">Ondulée</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="boucles" name="selector8">
+                    <label for="boucles">Bouclés</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="frises" name="selector8">
+                    <label for="frises">Frisés</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="crepus" name="selector8">
+                    <label for="crepus">Crépus</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="radioType">
+                <h3>9. Quelles sont vos deux principales préoccupations capillaires?</h3>
+                <div class="radioColumn">
+                  <div class="left">
+                    <ul>
+                      <li>
+                        <input type="radio" id="purifier" name="selector9">
+                        <label for="purifier">Purifier mes cheveux gras </label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="abimes" name="selector9">
+                        <label for="abimes">Réparer mes cheveux abimés</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="soin" name="selector9">
+                        <label for="soin">Prendre soin de ma couleur</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="nourrir" name="selector9">
+                        <label for="nourrir">Nourrir mes cheveux secs</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="renforcer" name="selector9">
+                        <label for="renforcer">Renforcer mes cheveux fragilisés</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>
+                        <input type="radio" id="lisser" name="selector10">
+                        <label for="lisser">Lisser mes cheveux rebelles</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="epaissir" name="selector10">
+                        <label for="epaissir">épaissir ma chevelure</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="pellicules" name="selector10">
+                        <label for="pellicules">éliminer les pellicules</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="boucles" name="selector10">
+                        <label for="boucles">Prendre soin de mes boucles </label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="ternes" name="selector10">
+                        <label for="ternes">Raviver mes cheveux ternes</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+            <div class="header-radio">
+              <h1><span class="didot-italic">Votre</span>Maquillage</h1>
+            </div>
+            <div class="radioType">
+                <h3>10. Votre profil maquillage :</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="sophistique" name="selector11">
+                    <label for="sophistique">Sophistiqué, j'ai une bonne connaissance des techniques, je regarde des tutos et m'informe des tendances</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="chic" name="selector11">
+                    <label for="chic">Naturel chic, j'ai une routine facile et rapide que j'adapte pour sortir le soir ou pour des occasions</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="minimaliste" name="selector11">
+                    <label for="minimaliste">Minimaliste, je ne me maquille presque pas, un peu de mascara ou de poudre et c'est tout</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="radioType">
+                <h3>11. Votre panier moyen cosmétique par mois ( Make up, soin, hygiène…) / hors boxs</h3>
+                <ul>
+                  <li>
+                    <input type="radio" id="moins20" name="selector12">
+                    <label for="moins20">Moins de 20€ par mois</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="moins30" name="selector12">
+                    <label for="moins30">Moins de 30€ par mois</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="moins40" name="selector12">
+                    <label for="moins40">Moins de 40€ par mois</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="plus40" name="selector12">
+                    <label for="plus40">plus de 40€ par mois</label>
+                    <div class="check"></div>
+                  </li>
+
+                  <li>
+                    <input type="radio" id="plus70" name="selector12">
+                    <label for="plus70">plus de 70€ par mois</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="checkboxType">
+                <h3>12. J'achete mes produits de beauté...</h3>
+                <div class="checkboxColumn">
+                  <div class="left">
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="internet" name="selector13">
+                        <label for="internet">sur internet</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="grandesurface" name="selector13">
+                        <label for="grandesurface">en grande et moyenne surface</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="parfumerie" name="selector13">
+                        <label for="parfumerie">en parfumerie</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="estheticienne" name="selector13">
+                        <label for="estheticienne">chez l'esthéticienne, au spa</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="pharmacie" name="selector13">
+                        <label for="pharmacie">en pharmacie et parapharmacie</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="chaines" name="selector13">
+                        <label for="chaines">dans les chaines spécialisées Sephora, Marionnaud...</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="partout">
+                    <ul>
+                      <li>
+                        <input type="checkbox" id="partout" name="selector13">
+                        <label for="partout">Un peu partout</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+            <div class="radioType">
+                <h3>13. Votre prochain achat beauté, vous êtes certaine de le spotter : </h3>
+                <div class="radioColumn">
+                  <div class="left">
+                    <ul>
+                      <li>
+                        <input type="radio" id="reseaux" name="selector14">
+                        <label for="reseaux">Sur les réseaux sociaux</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="blogs" name="selector14">
+                        <label for="blogs">Sur les blogs</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="magasins" name="selector14">
+                        <label for="magasins">Dans les magasins spécialisés</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="right">
+                    <ul>
+                      <li>
+                        <input type="radio" id="inBox" name="selector14">
+                        <label for="inBox">Dans les Boxs beauté</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="pub" name="selector14">
+                        <label for="pub">Sur une Publicité</label>
+                        <div class="check"></div>
+                      </li>
+
+                      <li>
+                        <input type="radio" id="bouche" name="selector14">
+                        <label for="bouche">Grâce au bouche à oreille</label>
+                        <div class="check"></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+            <div class="submit-button">
+              <button type="submit" name="submit" class="btn">Sauvegarder</button>
+            </div>
+
+          </form>
+        </section>
+      </div>
+
+    <script src="../script/tweenMax.min.js"></script>
+    <script src="../script/jquery.min.js"></script>
+    <script src="../script/account-nav-mobile.js"></script>
+
+  </body>
+</html>
